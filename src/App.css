@@ -72,7 +72,7 @@ html,body {
 }
 
 .formGroup {
- text-align: center;
+ text-align: -webkit-center;
 }
 
 .formTitle {
@@ -98,15 +98,15 @@ input {
 
 .formButton {
   background-color:var(--lightYellow);
-  width: 250px;
-  height: 60px;
-  padding: 2rem;
   border: none;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 30px;
   font-family: Merriweather;
   font-weight: bold;
-  font-size: 25px;
-  display: inline-block;
-  text-align: center;
+  margin: 2rem;
 }
 
 .formButton:hover {
