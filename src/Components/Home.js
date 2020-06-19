@@ -1,5 +1,5 @@
 import React from 'react';
-import ball from '../../src/ball.svg';
+import ball from '../../src/imgs/ball.svg';
 import { Link } from "react-router-dom";
 
 

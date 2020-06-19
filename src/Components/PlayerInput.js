@@ -4,20 +4,25 @@ function PlayerInput() {
 
     return (
 
-        <div class="PlayerInputForm">
-            <h2>Add Your Team Members</h2>
-            <div>
-                <form>
-                    <div class="playerInput">
-                        <label></label>
-                        <input></input>
-                    </div>
+        <div className="playerInputForm">
 
+            <div className="form">
+                <form>
+                    <h1 className="formTitle">Name Your Players</h1>
+                    <div className="formGroup">
+                        <input 
+                        type="text" 
+                        class="input"
+                        value="">
+                        </input>
+                        <input type="text" class="input"></input>
+                        <input type="text" class="input"></input>
+                    </div>
+                    <button className="formButton">Pick My Team</button>
                 </form>
             </div>
-
         </div>
     )
 }
 
-    export default PlayerInput;
+export default PlayerInput;
