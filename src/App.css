@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  width:100vw;
 }
 
 .App-logo {
@@ -39,7 +40,8 @@ html,body {
   min-height: 100vh;
   display: flex;
 	align-items: center;
-	justify-content: center;
+  justify-content: center;
+  background-color: rgb(204, 188, 135);
 }
 
 /* Homepage Styling */
@@ -99,7 +101,7 @@ input {
 .formButton {
   background-color:var(--lightYellow);
   border: none;
-  padding: 15px 32px;
+  padding: 25px 40px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
