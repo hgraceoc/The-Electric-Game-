@@ -33,3 +33,20 @@
     transform: rotate(360deg);
   }
 }
+
+/* Homepage Styling */
+.homeLink {
+  color: #ff9800;
+}
+
+
+/* Form Styling */
+.PlayerInputForm {
+  display: flex;
+	align-items: flex-start;
+	justify-content: space-around;
+	margin-top: 30px;
+	border: 1px solid whitesmoke;
+	padding: 21px;
+	border-radius: 4px;
+}

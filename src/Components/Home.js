@@ -1,5 +1,6 @@
 import React from 'react';
 import ball from '../../src/ball.svg';
+import { Link } from "react-router-dom";
 
 
 function Home() {
@@ -10,6 +11,7 @@ function Home() {
           <img src={ball} className="App-logo" alt="logo" />
           
           <p>I hear that people call it the Electric Game</p>
+          <Link className="homeLink" to="/select">Name Your Players!</Link>
   
         </header>
       </div>
