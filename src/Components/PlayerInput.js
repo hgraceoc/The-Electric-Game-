@@ -8,7 +8,7 @@ function PlayerInput() {
 
             <div className="form">
                 <form>
-                    <h1 className="formTitle">Name Your Players</h1>
+                    <h1 className="title">Name Your Players</h1>
                     <div className="formGroup">
                         <input
                             type="text"

@@ -35,6 +35,20 @@
   }
 }
 
+/* colours */
+:root {
+  --dullerYellow: rgb(204, 188, 135);
+  --midYellow: rgb(239, 216, 137);
+  --lightYellow: rgb(251, 231, 168);
+  }
+  
+  /* fonts */
+  @font-face{
+    font-family: 'Merriweather', Serif;
+    font-weight: bold;
+    src:url("../src//fonts/Merriweather/Merriweather-Bold.ttf") format("truetype");
+  }
+
 html,body {
 	position: relative;
   min-height: 100vh;
@@ -77,7 +91,7 @@ html,body {
  text-align: -webkit-center;
 }
 
-.formTitle {
+.title {
   font-family: Merriweather;
   font-size: 4rem;
 }
@@ -115,16 +129,19 @@ input {
   background-color:var(--dullerYellow);
 }
 
-/* colours */
-:root {
---dullerYellow: rgb(204, 188, 135);
---midYellow: rgb(239, 216, 137);
---lightYellow: rgb(251, 231, 168);
+/* Table Styling */
+
+.teamTable {
+  background-color: rgb(239, 216, 137);
+  height: 700px;
+	width: 550px;
+  border-radius: 15px;
+  margin: 2rem;
+  padding: 2rem;
 }
 
-/* fonts */
-@font-face{
-  font-family: 'Merriweather', Serif;
-  font-weight: bold;
-  src:url("../src//fonts/Merriweather/Merriweather-Bold.ttf") format("truetype");
+td {
+  text-align: left;
+  border-bottom: 1px solid black;
+
 }
