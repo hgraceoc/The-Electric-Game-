@@ -119,6 +119,8 @@ html,body {
 	position: relative;
   border-radius: 15px;
   padding: 2rem;
+  margin: auto;
+  margin-top: 2rem;
 }
 
 .playerInputForm::after {
@@ -182,7 +184,8 @@ input {
   height: 700px;
 	width: 550px;
   border-radius: 15px;
-  margin: 2rem;
+  margin: auto;
+  margin-top: 2rem;
   padding: 2rem;
 }
 
