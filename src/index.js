@@ -4,9 +4,17 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
+import store from "./data/store";
+import initial from "../src/data/initial";
+import reducer from "../src/data/reducers";
+
+import { Provider } from "react-redux";
+
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Provider store={store}>
+      <App />
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );
