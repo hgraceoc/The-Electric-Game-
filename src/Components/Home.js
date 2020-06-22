@@ -1,5 +1,5 @@
 import React from 'react';
-import ball from '../../src/imgs/ball.svg';
+import football from '../../src/imgs/football.svg';
 import { Link } from "react-router-dom";
 
 
@@ -8,9 +8,9 @@ function Home() {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={ball} className="App-logo" alt="logo" />
+          <img src={football} className="App-logo" alt="logo" />
           
-          <p>I hear that people call it the Electric Game</p>
+          <h1 className="homeTitle">Team Selector!</h1>
           <Link className="homeLink" to="/select">Name Your Players!</Link>
   
         </header>

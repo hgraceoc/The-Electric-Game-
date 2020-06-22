@@ -15,14 +15,18 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: var(--lightYellow);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+}
+
+.homeTitle {
+  font-family: 'Shrikhand', Cursive;
+  font-size: calc(40px + 8vmin);
 }
 
 
@@ -49,14 +53,31 @@
     src:url("../src//fonts/Merriweather/Merriweather-Bold.ttf") format("truetype");
   }
 
+  @font-face{
+    font-family: 'Shrikhand', Cursive;
+    font-weight: bold;
+    src:url("../src//fonts/Shrikhand/Shrikhand-Regular.ttf") format("truetype");
+  }
+
+
 html,body {
 	position: relative;
   min-height: 100vh;
   display: flex;
 	align-items: center;
   justify-content: center;
-  background-color: rgb(204, 188, 135);
+  background-image: url(../src/imgs/background.jpg);
+  height: 100vh;
+  width: 100vw;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
+
+.background {
+  
+}
+
+
 
 /* Homepage Styling */
 .homeLink {
@@ -92,7 +113,7 @@ html,body {
 }
 
 .title {
-  font-family: Merriweather;
+  font-family: 'Shrikhand', Cursive;
   font-size: 4rem;
 }
 

@@ -3,7 +3,7 @@ import React from "react";
 function TeamTable() {
 
     return (
-
+<div className="background">
         <table className="teamTable">
             <thead>
                 <tr>
@@ -34,6 +34,7 @@ function TeamTable() {
                     </tr>
             </tbody>
         </table>
+    </div>
 
     )
 }
