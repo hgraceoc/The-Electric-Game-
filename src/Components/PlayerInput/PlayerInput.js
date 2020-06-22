@@ -1,10 +1,11 @@
 import React from "react";
 
-const PlayerInput = ({
-    players,
-}) => {
+const PlayerInput = (
+    {
+        players,
+    }
+) => {
 
-}
 
     return (
 
@@ -89,6 +90,7 @@ const PlayerInput = ({
             </div>
         </div>
     )
+}
 
 
 export default PlayerInput;
