@@ -3,34 +3,18 @@
   width:100vw;
 }
 
-.App-logo {
+.logo {
   height: 20vmin;
   pointer-events: none;
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+  .logo {
+    animation: logo-spin infinite 20s linear;
   }
 }
 
-.App-header {
-  background-color: var(--lightYellow);
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-
-}
-
-.homeTitle {
-  font-family: 'Shrikhand', Cursive;
-  font-size: calc(40px + 8vmin);
-}
-
-
-@keyframes App-logo-spin {
+@keyframes logo-spin {
   from {
     transform: rotate(0deg);
   }
@@ -38,6 +22,21 @@
     transform: rotate(360deg);
   }
 }
+
+.home {
+  background-image: url(../src/imgs/background.jpg);
+  background-color: var(--lightYellow);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.homeBackgroundImg {
+  opacity: 50%;
+}
+
 
 /* colours */
 :root {
@@ -55,8 +54,12 @@
 
   @font-face{
     font-family: 'Shrikhand', Cursive;
-    font-weight: bold;
     src:url("../src//fonts/Shrikhand/Shrikhand-Regular.ttf") format("truetype");
+  }
+
+  @font-face{
+    font-family: 'Muli', sans-serif;
+    src:url("../src//fonts/Muli/Muli-Italic.ttf") format("truetype");
   }
 
 
@@ -74,14 +77,43 @@ html,body {
 }
 
 .background {
-  
+  background-image: url(../src/imgs/background.jpg);
+  height: 100vh;
+  width: 100vw;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 
-
 /* Homepage Styling */
+.home {
+  height: 100vh;
+  width: 100vw;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.homeTitle {
+  font-family: 'Shrikhand', Cursive;
+  font-size: calc(40px + 8vmin);
+}
+
 .homeLink {
-  color: #ff9800;
+  color: black;
+  font-size: calc(20px + 3vmin);
+  font-family: 'Muli', sans-serif;
+  text-decoration: none;
+  background-color:var(--lightYellow);
+  padding: 25px 40px;
+  text-align: center;
+  display: inline-block;
+  font-size: 30px;
+  font-weight: bold;
+  margin: 2rem;
+}
+
+.homeLink:hover {
+  color:var(--dullerYellow);
 }
 
 
