@@ -51,6 +51,34 @@ function PlayerInput() {
                             value=""
                             placeholder="#6">
                         </input>
+
+                        <input
+                            type="text"
+                            class="input"
+                            value=""
+                            placeholder="#7">
+                        </input>
+
+                        <input
+                            type="text"
+                            class="input"
+                            value=""
+                            placeholder="#8">
+                        </input>
+
+                        <input
+                            type="text"
+                            class="input"
+                            value=""
+                            placeholder="#9">
+                        </input>
+
+                        <input
+                            type="text"
+                            class="input"
+                            value=""
+                            placeholder="#10">
+                        </input>
                     </div>
                     <button className="formButton">Pick My Teams</button>
                 </form>
