@@ -1,4 +1,4 @@
-const addPlayer = (state, { players }) => {
+const addPlayerReducer = (state, { players }) => {
     return {
         ...state,
         players,
@@ -8,7 +8,7 @@ const addPlayer = (state, { players }) => {
 
 const reducer = (state, action) => {
     switch (action.type) {
-        case "ADD_PLAYER": return addPlayer(state, action);
+        case "ADD_PLAYER": return addPlayerReducer(state, action);
         default: return state;
     }
 }
