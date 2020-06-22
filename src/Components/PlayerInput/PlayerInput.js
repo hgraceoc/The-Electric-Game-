@@ -1,6 +1,10 @@
 import React from "react";
 
-function PlayerInput() {
+const PlayerInput = ({
+    players,
+}) => {
+
+}
 
     return (
 
@@ -85,6 +89,6 @@ function PlayerInput() {
             </div>
         </div>
     )
-}
+
 
 export default PlayerInput;
