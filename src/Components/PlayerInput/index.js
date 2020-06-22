@@ -16,12 +16,7 @@ import history from "../../data/history";
 };
 const mapDispatchToProps = dispatch => {
   return {
-      handleSubmit: data => {
-          
-          dispatch(addPlayer(data));
-          
-          history.push("/");
-      },
+      handleSubmit: data => dispatch(addPlayer(data)),      
   };
 };
 

@@ -21,6 +21,7 @@ class PlayerInput extends Component {
 
     handleSubmit(e) {
         e.preventDefault();
+        this.props.handleSubmit(this.state.player)
       }
 
     render() {
