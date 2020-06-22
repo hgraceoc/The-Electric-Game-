@@ -1,7 +1,7 @@
 import React from 'react';
 
 import PlayerInput from "./PlayerInput";
-import TeamTable from "./TeamTable";
+import TeamTable from "./TeamTable/TeamTable";
 
 function PlayerPlatform() {
 

@@ -8,10 +8,17 @@ import './App.css';
 
 import Home from "./Components/Home";
 import PlayerPlatform from "./Components/PlayerPlatform";
+import PlayerInput from './Components/PlayerInput/PlayerInput';
+
+import Form from './Components/PlayerInput/Form';
 
 
-function App() {
-  return (
+const App =({
+  player, 
+  setPlayer,
+  addPlayer,
+
+}) => (
     <Router>
       <>
         <Route exact path="/">
@@ -25,6 +32,5 @@ function App() {
     </Router>
 
   );
-}
 
 export default App;

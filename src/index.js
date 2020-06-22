@@ -3,6 +3,10 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import { createStore, compose, applyMiddleware } from "redux";
+import persistState from "redux-localstorage";
+
+import thunk from "redux-thunk";
 
 import store from "./data/store";
 import initial from "../src/data/initial";
@@ -12,8 +16,10 @@ import { Provider } from "react-redux";
 
 ReactDOM.render(
   <React.StrictMode>
-    <Provider store={store}>
-      <App />
+    <Provider store={ store }>
+      <App
+      addPlayer={() => store.dispatch({ type: "ADD_PLAYER" })}
+      />
     </Provider>
   </React.StrictMode>,
   document.getElementById('root')

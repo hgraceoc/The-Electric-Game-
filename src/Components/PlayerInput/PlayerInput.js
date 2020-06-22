@@ -1,95 +1,58 @@
-import React from "react";
+import React, { Component } from "react";
+import inital from "../../data/initial";
 
-const PlayerInput = (
-    {
-        players,
+class PlayerInput extends Component {
+
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            player: props.player,
+        };
+
+        this.handleChange = this.handleChange.bind(this);
+
+        this.handleSubmit = this.handleSubmit.bind(this);
     }
-) => {
+
+    handleChange(e) {
+        this.setState({ player: e.currentTarget.value })
+    }
+
+    handleSubmit(e) {
+        e.preventDefault();
+      }
+
+    render() {
+        let { player } = this.state;
 
 
     return (
-
+        <>
         <div className="playerInputForm">
 
             <div className="form">
-                <form>
+                <form onSubmit={this.handleSubmit}>
                     <h1 className="title">Name Your Players</h1>
                     <div className="formGroup">
                         <input
-                            type="text"
-                            class="input"
-                            value=""
+                            onChange={this.handleChange}
+                            value={player}
                             placeholder="#1">
                         </input>
 
-                        <input
-                            type="text"
-                            class="input"
-                            value=""
-                            placeholder="#2">
-                        </input>
-
-                        <input
-                            type="text"
-                            class="input"
-                            value=""
-                            placeholder="#3">
-                        </input>
-
-                        <input
-                            type="text"
-                            class="input"
-                            value=""
-                            placeholder="#4">
-                        </input>
-
-                        <input
-                            type="text"
-                            class="input"
-                            value=""
-                            placeholder="#5">
-                        </input>
-
-                        <input
-                            type="text"
-                            class="input"
-                            value=""
-                            placeholder="#6">
-                        </input>
-
-                        <input
-                            type="text"
-                            class="input"
-                            value=""
-                            placeholder="#7">
-                        </input>
-
-                        <input
-                            type="text"
-                            class="input"
-                            value=""
-                            placeholder="#8">
-                        </input>
-
-                        <input
-                            type="text"
-                            class="input"
-                            value=""
-                            placeholder="#9">
-                        </input>
-
-                        <input
-                            type="text"
-                            class="input"
-                            value=""
-                            placeholder="#10">
-                        </input>
                     </div>
-                    <button className="formButton">Pick My Teams</button>
+                    <button 
+                        className="formButton"
+                        type="submit">
+                        Pick My Teams</button>
                 </form>
             </div>
         </div>
+        </>
     )
+
+}
 }
 
 
