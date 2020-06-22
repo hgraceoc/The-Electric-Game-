@@ -7,8 +7,7 @@ import {
 import './App.css';
 
 import Home from "./Components/Home";
-import PlayerInput from "./Components/PlayerInput";
-import TeamTable from "./Components/TeamTable";
+import PlayerPlatform from "./Components/PlayerPlatform";
 
 
 function App() {
@@ -20,9 +19,7 @@ function App() {
         </Route>
 
         <Route exact path="/select">
-          <PlayerInput></PlayerInput>
-          <TeamTable></TeamTable>
-          <TeamTable></TeamTable>
+          <PlayerPlatform></PlayerPlatform>
         </Route>
       </>
     </Router>

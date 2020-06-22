@@ -1,3 +1,50 @@
+/* colours */
+:root {
+  --dullerYellow: rgb(204, 188, 135);
+  --midYellow: rgb(239, 216, 137);
+  --lightYellow: rgb(251, 231, 168);
+  }
+  
+  /* fonts */
+  @font-face{
+    font-family: 'Merriweather', Serif;
+    font-weight: bold;
+    src:url("../src//fonts/Merriweather/Merriweather-Bold.ttf") format("truetype");
+  }
+
+  @font-face{
+    font-family: 'Shrikhand', Cursive;
+    src:url("../src//fonts/Shrikhand/Shrikhand-Regular.ttf") format("truetype");
+  }
+
+  @font-face{
+    font-family: 'Muli', sans-serif;
+    src:url("../src//fonts/Muli/Muli-Italic.ttf") format("truetype");
+  }
+
+
+html,body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+
+}
+
+.background {
+  background-image: url(../src/imgs/background.jpg);
+  height: 100vh;
+  width: 100vw;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 0;
+  z-index: 0;
+  overflow-Y: scroll;
+}
+
+/* Homepage Styling */
+
 .App {
   text-align: center;
   width:100vw;
@@ -27,70 +74,13 @@
   background-image: url(../src/imgs/background.jpg);
   background-color: var(--lightYellow);
   min-height: 100vh;
+  width: 100vw;
+  background-size: cover;
+  background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-}
-
-.homeBackgroundImg {
-  opacity: 50%;
-}
-
-
-/* colours */
-:root {
-  --dullerYellow: rgb(204, 188, 135);
-  --midYellow: rgb(239, 216, 137);
-  --lightYellow: rgb(251, 231, 168);
-  }
-  
-  /* fonts */
-  @font-face{
-    font-family: 'Merriweather', Serif;
-    font-weight: bold;
-    src:url("../src//fonts/Merriweather/Merriweather-Bold.ttf") format("truetype");
-  }
-
-  @font-face{
-    font-family: 'Shrikhand', Cursive;
-    src:url("../src//fonts/Shrikhand/Shrikhand-Regular.ttf") format("truetype");
-  }
-
-  @font-face{
-    font-family: 'Muli', sans-serif;
-    src:url("../src//fonts/Muli/Muli-Italic.ttf") format("truetype");
-  }
-
-
-html,body {
-	position: relative;
-  min-height: 100vh;
-  display: flex;
-	align-items: center;
-  justify-content: center;
-  background-image: url(../src/imgs/background.jpg);
-  height: 100vh;
-  width: 100vw;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-.background {
-  background-image: url(../src/imgs/background.jpg);
-  height: 100vh;
-  width: 100vw;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-
-/* Homepage Styling */
-.home {
-  height: 100vh;
-  width: 100vw;
-  background-size: cover;
-  background-repeat: no-repeat;
 }
 
 .homeTitle {
