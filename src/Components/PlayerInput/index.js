@@ -5,8 +5,6 @@ import PlayerInput from "./PlayerInput";
 
 import { addPlayer } from "../../data/actions";
 
-import history from "../../data/history";
-
  const mapStateToProps = state => {
   return {
       player: state.player,

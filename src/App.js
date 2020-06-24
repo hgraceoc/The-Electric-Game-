@@ -10,8 +10,6 @@ import Home from "./Components/Home";
 import PlayerPlatform from "./Components/PlayerPlatform";
 import PlayerInput from './Components/PlayerInput/PlayerInput';
 
-import Form from './Components/PlayerInput/Form';
-
 
 const App =({
   player, 
