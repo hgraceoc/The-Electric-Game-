@@ -7,14 +7,13 @@ import { addPlayer } from "../../data/actions";
 
  const mapStateToProps = state => {
   return {
-      player: state.player,
-      players: state.players,
+      player: state.players,
   };
 
 };
 const mapDispatchToProps = dispatch => {
   return {
-      handleSubmit: data => dispatch(addPlayer(data)),      
+      handleSubmit: playerName => dispatch(addPlayer(playerName)),      
   };
 };
 

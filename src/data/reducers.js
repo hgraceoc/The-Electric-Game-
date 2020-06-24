@@ -1,9 +1,17 @@
-const addPlayer = (state,{ player }) => ({ ...state, player: player });
+import initial from "./initial";
 
-//next, store players in player array
+const addPlayer = (state, action) => {
+    return {
+        ...state,
+        players: [
+            ...state.players,
+            action.playerName,
+        ]
+    }
+}
 
-//add reducer to randomise player names 
-// randomiseReducer(addPlayerReducer)
+//add reducer function to randomise player names 
+// randomise(addPlayer)
 
 const reducer = (state, action) => {
     switch (action.type) {

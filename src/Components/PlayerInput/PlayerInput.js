@@ -7,8 +7,9 @@ class PlayerInput extends Component {
         super(props);
 
         this.state = {
-            player: props.player,
+            playerName: ''
         };
+        //store playerName input locally 
 
         this.handleChange = this.handleChange.bind(this);
 
@@ -16,44 +17,52 @@ class PlayerInput extends Component {
     }
 
     handleChange(e) {
-        this.setState({ player: e.currentTarget.value })
+        this.setState({ playerName: e.currentTarget.value })
     }
 
     handleSubmit(e) {
+        const { playerName } = this.state;
         e.preventDefault();
-        this.props.handleSubmit(this.state.player)
-      }
+        this.props.handleSubmit(playerName)
+    }
 
     render() {
-        let { player } = this.state;
+        const { players } = this.props;
+        const { playerName } = this.state;
+        //player inputs are stored in local state, but the players array we are accessing from the store 
+        console.log(players)
 
 
-    return (
-        <>
-        <div className="playerInputForm">
+        return (
+            <>
+                <div className="playerInputForm">
 
-            <div className="form">
-                <form onSubmit={this.handleSubmit}>
-                    <h1 className="title">Name Your Players</h1>
-                    <div className="formGroup">
-                        <input
-                            onChange={this.handleChange}
-                            value={player}
-                            placeholder="#1">
-                        </input>
+                    <div className="form">
+                        <form onSubmit={this.handleSubmit}>
+                            <h1 className="title">Name Your Players</h1>
+                            <div className="formGroup">
+                                <input
+                                    onChange={this.handleChange}
+                                    value={playerName}
+                                    placeholder="#1">
+                                </input>
 
+                            </div>
+                            <button
+                                className="formButton"
+                                type="submit">
+                                Add Player</button>
+                        </form>
                     </div>
-                    <button 
-                        className="formButton"
-                        type="submit">
-                        Pick My Teams</button>
-                </form>
-            </div>
-        </div>
-        </>
-    )
+                </div>
+            </>
+        )
 
+    }
 }
+
+PlayerInput.defaultProps = {
+    playerName: ''
 }
 
 
