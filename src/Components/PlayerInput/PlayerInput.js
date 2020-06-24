@@ -40,6 +40,7 @@ class PlayerInput extends Component {
     render() {
         const { players } = this.props;
         const { playerName } = this.state;
+        const { submitted } = this.state;
         //player inputs are stored in local state, but the players array we are accessing from the store 
         console.log(players)
 
@@ -83,7 +84,7 @@ class PlayerInput extends Component {
                             Pick My Teams!</button>
                     </div>
                 </div>
-
+            { submitted ? (
                 <div>
                     <table className="teamTable">
                         <thead>
@@ -98,6 +99,7 @@ class PlayerInput extends Component {
                         </tbody>
                     </table>
                 </div>
+            ) : null }
             </>
         )
 
