@@ -10,6 +10,8 @@ class PlayerInput extends Component {
         this.state = {
             playerName: '',
             submitted: false,
+            teamOne: [],
+            teamTwo: [],
         };
         //store playerName input locally 
 
@@ -35,20 +37,26 @@ class PlayerInput extends Component {
 
     handleSubmitTeams(e) {
         const { players } = this.state;
+        const { teamOne } = this.state;
+        const { teamTwo } = this.state;
         e.preventDefault();
-        this.setState({ submitted: true })
-        this.props.handleSubmitTeams(players)
+        this.setState({ submitted: true });
+        this.props.handleSubmitTeams(players, teamOne, teamTwo)
     }
 
     handleReset(e) {
         this.props.handleReset()
-        this.setState({ submitted: false})
+        this.setState({ submitted: false })
     }
 
     render() {
         const { players } = this.props;
         const { playerName } = this.state;
         const { submitted } = this.state;
+        const { teamOne } = this.props;
+        const { teamTwo } = this.props;
+
+
         //player inputs are stored in local state, but the players array we are accessing from the store 
         console.log(players)
 
@@ -97,21 +105,38 @@ class PlayerInput extends Component {
                 ) : null}
 
                 {submitted ? (
-                    <div>
+                    <>
+                    <div class="teamTables">
                         <table className="teamTable">
                             <thead>
                                 <tr>
-                                    <th className="title">Team</th>
+                                    <th className="title">Team One</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                {players.map((player, index) => (
-                                    <tr>Player{index + 1}:{player}</tr>
+                                {teamOne.map((player, index) => (
+                                    <tr>Player{index + 1 }:{ player }</tr>
                                 ))}
                             </tbody>
                         </table>
                     </div>
-                ) : null}
+
+                    <div>
+                        <table className="teamTable">
+                            <thead>
+                                <tr>
+                                    <th className="title">Team Two</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {teamTwo.map((player, index) => (
+                                    <tr>Player{index + 1}:{ player }</tr>
+                                ))}
+                            </tbody>
+                        </table>
+                    </div>
+                    </>
+                    ) : null}
 
                 <div>
                     <button
@@ -123,9 +148,9 @@ class PlayerInput extends Component {
                 </div>
             </>
         )
-
     }
 }
+
 
 PlayerInput.defaultProps = {
     playerName: ''
