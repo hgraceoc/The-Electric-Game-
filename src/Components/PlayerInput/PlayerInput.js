@@ -9,8 +9,8 @@ class PlayerInput extends Component {
         this.state = {
             playerName: '',
             submitted: false,
-            // teamOne: [],
-            // teamTwo: [],
+            teamOne: [],
+            teamTwo: [],
         };
         //store playerName input locally 
 
@@ -36,13 +36,13 @@ class PlayerInput extends Component {
 
     handleSubmitTeams(e) {
         const { players } = this.state;
-        // const { teamOne } = this.state;
-        // const { teamTwo } = this.state;
+        const { teamOne } = this.state;
+        const { teamTwo } = this.state;
         e.preventDefault();
         this.setState({ submitted: true });
         this.props.handleSubmitTeams(players)
-        // this.props.handleSubmitTeams(teamOne)
-        // this.props.handleSubmitTeams(teamTwo)
+        this.props.handleSubmitTeams(teamOne)
+        this.props.handleSubmitTeams(teamTwo)
     }
 
     handleReset(e) {
@@ -89,7 +89,7 @@ class PlayerInput extends Component {
                                 {players.map((player, index) =>
                                     <li
                                         className="playerListItem">
-                                        <label>Player{ index + 1 } :  </label>
+                                        <label className="playerLabel">Player{ index + 1 } :  </label>
                                         {player}
                                     </li>
                                 )}

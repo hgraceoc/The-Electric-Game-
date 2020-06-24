@@ -7,8 +7,9 @@ import { addPlayer, reset, shuffle, splitTeams } from "../../data/actions";
 
  const mapStateToProps = state => {
   return {
-      teamTwo: state.teamTwo,
       players: state.players,
+      teamOne: state.teamOne,
+      teamTwo: state.teamTwo,
   };
 
 };
