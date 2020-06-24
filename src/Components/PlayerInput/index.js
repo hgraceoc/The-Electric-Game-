@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import PlayerInput from "./PlayerInput";
 //import the component that we want to wrap
 
-import { addPlayer } from "../../data/actions";
+import { addPlayer, reset } from "../../data/actions";
 
  const mapStateToProps = state => {
   return {
@@ -13,9 +13,11 @@ import { addPlayer } from "../../data/actions";
 };
 const mapDispatchToProps = dispatch => {
   return {
-      handleSubmit: playerName => dispatch(addPlayer(playerName)),      
+      handleSubmit: playerName => dispatch(addPlayer(playerName)),  
+      handleReset: state => dispatch(reset(state))    
   };
 };
+
 
 export default connect(mapStateToProps, mapDispatchToProps)(PlayerInput);
 

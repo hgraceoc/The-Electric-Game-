@@ -17,6 +17,8 @@ class PlayerInput extends Component {
         this.handleSubmit = this.handleSubmit.bind(this);
 
         this.handleSubmitTeams = this.handleSubmitTeams.bind(this);
+
+        this.handleReset = this.handleReset.bind(this);
     }
 
     handleChange(e) {
@@ -34,7 +36,11 @@ class PlayerInput extends Component {
         const { playerName } = this.state;
         e.preventDefault();
         this.setState({ submitted: true })
+    }
 
+    handleReset(e) {
+        this.props.handleReset()
+        this.setState({ submitted: false})
     }
 
     render() {
@@ -47,59 +53,72 @@ class PlayerInput extends Component {
 
         return (
             <>
-                <div className="playerInputForm">
+                {!submitted ? (
+                    <div className="playerInputForm">
 
-                    <div className="form">
-                        <form onSubmit={this.handleSubmit}>
-                            <h1 className="title">Name Your Players</h1>
-                            <div className="formGroup">
-                                <input
-                                    onChange={this.handleChange}
-                                    value={playerName}
-                                    placeholder="Enter Player Name.."
-                                    required>
-                                </input>
+                        <div className="form">
+                            <form onSubmit={this.handleSubmit}>
+                                <h1 className="title">Name Your Players</h1>
+                                <p>Enter 10 Player Names & Then Click <strong>'Randomise Teams'</strong> To Randomly Generate Two Teams..</p>
+                                <div className="formGroup">
+                                    <input
+                                        onChange={this.handleChange}
+                                        value={playerName}
+                                        placeholder="Enter Player Name.."
+                                        required>
+                                    </input>
 
-                            </div>
+                                </div>
+                                <button
+                                    className="formButton"
+                                    type="submit">
+                                    Add Player</button>
+                            </form>
+                            <ul className="playerList">
+                                {players.map((player, index) =>
+                                    <li
+                                        className="playerListItem">
+                                        <label>Player{index + 1}:  </label>
+                                        {player}
+                                    </li>
+                                )}
+                            </ul>
+                        </div>
+                        <div className="submitTeamButtonContainer">
                             <button
-                                className="formButton"
+                                onClick={this.handleSubmitTeams}
+                                className="formButton submitTeamButton"
                                 type="submit">
-                                Add Player</button>
-                        </form>
-                        <ul className="playerList">
-                            {players.map((player, index) => 
-                                <li
-                                    className="playerListItem">
-                                    <label>Player{ index + 1 }:  </label>
-                                    {player}   
-                                </li>
-                            )}
-                        </ul>
+                                Randomise Teams!</button>
+                        </div>
                     </div>
-                    <div className="submitTeamButtonContainer">
-                        <button
-                            onClick={this.handleSubmitTeams}
-                            className="formButton submitTeamButton"
-                            type="submit">
-                            Pick My Teams!</button>
+                ) : null}
+
+                {submitted ? (
+                    <div>
+                        <table className="teamTable">
+                            <thead>
+                                <tr>
+                                    <th className="title">Team</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {players.map((player, index) => (
+                                    <tr>Player{index + 1}:{player}</tr>
+                                ))}
+                            </tbody>
+                        </table>
                     </div>
-                </div>
-            { submitted ? (
+                ) : null}
+
                 <div>
-                    <table className="teamTable">
-                        <thead>
-                            <tr>
-                                <th className="title">Team</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {players.map((player) => (
-                                <tr>{player}</tr>
-                            ))}
-                        </tbody>
-                    </table>
+                    <button
+                        onClick={this.handleReset}
+                        className="formButton resetButton"
+                        type="submit">
+                        Reset!
+                    </button>
                 </div>
-            ) : null }
             </>
         )
 

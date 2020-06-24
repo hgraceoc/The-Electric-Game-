@@ -4,3 +4,16 @@ export const addPlayer = (playerName) => {
         playerName,
     };
 };
+
+export const pickTeams = (playerName) => {
+    return {
+        type: "PICK_TEAMS",
+        playerName,
+    };
+};
+
+export const reset = () => {
+    return {
+        type: "RESET",
+    };
+};
