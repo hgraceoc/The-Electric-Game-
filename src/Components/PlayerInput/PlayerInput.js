@@ -44,7 +44,8 @@ class PlayerInput extends Component {
                                 <input
                                     onChange={this.handleChange}
                                     value={playerName}
-                                    placeholder="#1">
+                                    placeholder="#1"
+                                    required>
                                 </input>
 
                             </div>
@@ -53,6 +54,11 @@ class PlayerInput extends Component {
                                 type="submit">
                                 Add Player</button>
                         </form>
+                        <ul>
+                        {players.map((player) => {
+                            return <li>{ player }</li>
+                        })}
+                        </ul>
                     </div>
                 </div>
             </>

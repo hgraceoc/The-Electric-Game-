@@ -16,9 +16,7 @@ const addPlayer = (state, action) => {
 const reducer = (state, action) => {
     switch (action.type) {
         case "ADD_PLAYER": return addPlayer(state, action);
-        default: return state;
-
-        
+        default: return state;        
     }
 }
 export default reducer;

@@ -7,7 +7,7 @@ import { addPlayer } from "../../data/actions";
 
  const mapStateToProps = state => {
   return {
-      player: state.players,
+      players: state.players,
   };
 
 };
