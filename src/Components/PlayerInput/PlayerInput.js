@@ -7,13 +7,16 @@ class PlayerInput extends Component {
         super(props);
 
         this.state = {
-            playerName: ''
+            playerName: '',
+            submitted: false,
         };
         //store playerName input locally 
 
         this.handleChange = this.handleChange.bind(this);
 
         this.handleSubmit = this.handleSubmit.bind(this);
+
+        this.handleSubmitTeams = this.handleSubmitTeams.bind(this);
     }
 
     handleChange(e) {
@@ -24,6 +27,14 @@ class PlayerInput extends Component {
         const { playerName } = this.state;
         e.preventDefault();
         this.props.handleSubmit(playerName)
+    }
+
+    handleSubmitTeams(e) {
+        const { playerName } = this.state;
+        e.preventDefault();
+        this.props.handleSubmit(playerName)
+        this.setState({ submitted: true })
+
     }
 
     render() {
@@ -55,17 +66,37 @@ class PlayerInput extends Component {
                                 Add Player</button>
                         </form>
                         <ul className="playerList">
-                            {players.map((player) => {
-                                return <li className="playerListItem">{player}</li>
-                            })}
+                            {players.map((player, index) => 
+                                <li
+                                    className="playerListItem">
+                                    <label>Player{ index + 1 }:  </label>
+                                    {player}   
+                                </li>
+                            )}
                         </ul>
                     </div>
                     <div className="submitTeamButtonContainer">
-                    <button
-                        className="formButton submitTeamButton"
-                        type="submit">
-                        Pick My Teams!</button>
+                        <button
+                            onClick={this.handleSubmitTeams}
+                            className="formButton submitTeamButton"
+                            type="submit">
+                            Pick My Teams!</button>
                     </div>
+                </div>
+
+                <div>
+                    <table className="teamTable">
+                        <thead>
+                            <tr>
+                                <th className="title">Team</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {players.map((player) => (
+                                <tr>{player}</tr>
+                            ))}
+                        </tbody>
+                    </table>
                 </div>
             </>
         )
