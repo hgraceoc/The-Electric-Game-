@@ -1,43 +1,42 @@
 import initial from "./initial";
 
+//reducer to reset the form, when user clicks reset button
+const reset = (state) => {
+    return {
+        ...initial,
+    }
+}
 
-const shuffle = (state) => {
-    let team = state.players;
+//add new player input to the store
+const addPlayer = (state, action) => {
     return {
         ...state,
         players: [
-            ...state.players.sort(() => Math.random() - 0.5)
+            ...state.players,
+            action.playerName,
         ]
-    };
+    }
+}
+
+//function to shuffle teams - call function on the data returned when the form is submitted 
+let shuffle = (state, action) => {
+    return {
+        ...state, 
+        players: [
+            ...state.players.sort(() => Math.random() - 0.5),
+        action.players,
+        ]
+    }
 }
 
 
-    //reducer to reset the form, when user clicks reset button
-    const reset = (state) => {
-        return {
-            ...initial,
-        }
-    }
 
-    const addPlayer = (state, action) => {
-        return {
-            ...state,
-            players: [
-                ...state.players,
-                action.playerName,
-            ]
-        }
+const reducer = (state, action) => {
+    switch (action.type) {
+        case "ADD_PLAYER": return addPlayer(state, action);
+        case "SHUFFLE": return shuffle(state, action);
+        case "RESET": return reset(state, action);
+        default: return state;
     }
-
-    //add reducer function to randomise player names 
-    // randomise(addPlayer)
-
-    const reducer = (state, action) => {
-        switch (action.type) {
-            case "ADD_PLAYER": return addPlayer(state, action);
-            case "SHUFFLE" : return shuffle(addPlayer(state,action))
-            case "RESET" : return reset(state,action);
-            default: return state;
-        }
-    }
-    export default reducer;
+}
+export default reducer;

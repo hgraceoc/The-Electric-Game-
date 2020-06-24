@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import inital from "../../data/initial";
+import randomise from "../../data/reducers";
 
 class PlayerInput extends Component {
 
@@ -33,9 +34,10 @@ class PlayerInput extends Component {
     }
 
     handleSubmitTeams(e) {
-        const { playerName } = this.state;
+        const { players } = this.state;
         e.preventDefault();
         this.setState({ submitted: true })
+        this.props.handleSubmitTeams(players)
     }
 
     handleReset(e) {

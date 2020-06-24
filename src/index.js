@@ -19,6 +19,8 @@ ReactDOM.render(
     <Provider store={ store }>
       <App
       addPlayer={() => store.dispatch({ type: "ADD_PLAYER" })}
+      reset={() => store.dispatch({ type: "RESET" })}
+      shuffle={() => store.dispatch({ type: "SHUFFLE" })}
       />
     </Provider>
   </React.StrictMode>,

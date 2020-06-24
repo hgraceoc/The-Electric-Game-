@@ -5,9 +5,9 @@ export const addPlayer = (playerName) => {
     };
 };
 
-export const pickTeams = (playerName) => {
+export const shuffle = (playerName) => {
     return {
-        type: "PICK_TEAMS",
+        type: "SHUFFLE",
         playerName,
     };
 };
