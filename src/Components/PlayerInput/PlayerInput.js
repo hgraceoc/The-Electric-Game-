@@ -54,11 +54,17 @@ class PlayerInput extends Component {
                                 type="submit">
                                 Add Player</button>
                         </form>
-                        <ul>
-                        {players.map((player) => {
-                            return <li>{ player }</li>
-                        })}
+                        <ul className="playerList">
+                            {players.map((player) => {
+                                return <li className="playerListItem">{player}</li>
+                            })}
                         </ul>
+                    </div>
+                    <div className="submitTeamButtonContainer">
+                    <button
+                        className="formButton submitTeamButton"
+                        type="submit">
+                        Pick My Teams!</button>
                     </div>
                 </div>
             </>

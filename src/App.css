@@ -29,6 +29,7 @@ html,body {
   justify-content: center;
   height: 100vh;
   width: 100vw;
+  font-family: 'Muli', sans-serif;
 }
 
 .background {
@@ -133,6 +134,7 @@ html,body {
 
 .form {
   text-align: center;
+  position: relative;
 }
 
 .formGroup {
@@ -168,13 +170,33 @@ input {
   text-decoration: none;
   display: inline-block;
   font-size: 30px;
-  font-family: Merriweather;
+  font-family: 'Muli', sans-serif;
   font-weight: bold;
   margin: 2rem;
 }
 
 .formButton:hover {
   background-color:var(--dullerYellow);
+}
+
+.submitTeamButtonContainer {
+position: relative;
+text-align: center;
+}
+
+.submitTeamButton {
+  position: relative;
+  margin: auto;
+}
+
+.playerList {
+  padding-left:0 
+}
+
+.playerListItem {
+  list-style: none;
+  margin: 1rem;
+  font-size: 20px;
 }
 
 /* Table Styling */
