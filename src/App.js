@@ -7,14 +7,10 @@ import {
 import './App.css';
 
 import Home from "./Components/Home";
-import PlayerInput from './Components/PlayerInput/PlayerInput';
 import PlayerPlatform from './Components/PlayerPlatform';
 
 
 const App =({
-  player, 
-  setPlayer,
-  addPlayer,
 
 }) => (
     <Router>

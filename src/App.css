@@ -173,6 +173,7 @@ input {
   font-family: 'Muli', sans-serif;
   font-weight: bold;
   margin: 2rem;
+  overflow: scroll;
 }
 
 .formButton:hover {
@@ -185,8 +186,12 @@ text-align: center;
 }
 
 .submitTeamButton {
-  position: relative;
   margin: auto;
+  margin-top: 1rem;
+}
+
+.resetButton {
+  text-align: center;
 }
 
 .playerList {
@@ -196,10 +201,15 @@ text-align: center;
 .playerListItem {
   list-style: none;
   margin: 1rem;
-  font-size: 20px;
+  font-size: 25px;
+}
+
+.playerLabel {
+  font-weight: bold;
 }
 
 /* Table Styling */
+
 
 .teamTable {
   background-color: rgb(239, 216, 137);
@@ -209,10 +219,17 @@ text-align: center;
   margin: auto;
   margin-top: 2rem;
   padding: 2rem;
+  text-align: center;
+  overflow: scroll;
 }
 
-td {
+th {
+  text-align: center;
+}
+
+tr {
   text-align: left;
   border-bottom: 1px solid black;
-
+  font-size: 20px;
 }
+
