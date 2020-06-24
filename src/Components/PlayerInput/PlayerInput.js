@@ -27,12 +27,12 @@ class PlayerInput extends Component {
         const { playerName } = this.state;
         e.preventDefault();
         this.props.handleSubmit(playerName)
+        this.setState({ playerName: "" })
     }
 
     handleSubmitTeams(e) {
         const { playerName } = this.state;
         e.preventDefault();
-        this.props.handleSubmit(playerName)
         this.setState({ submitted: true })
 
     }
@@ -56,7 +56,7 @@ class PlayerInput extends Component {
                                 <input
                                     onChange={this.handleChange}
                                     value={playerName}
-                                    placeholder="#1"
+                                    placeholder="Enter Player Name.."
                                     required>
                                 </input>
 
