@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import inital from "../../data/initial";
-import randomise from "../../data/reducers";
 
 class PlayerInput extends Component {
 
@@ -10,8 +9,8 @@ class PlayerInput extends Component {
         this.state = {
             playerName: '',
             submitted: false,
-            teamOne: [],
-            teamTwo: [],
+            // teamOne: [],
+            // teamTwo: [],
         };
         //store playerName input locally 
 
@@ -37,11 +36,13 @@ class PlayerInput extends Component {
 
     handleSubmitTeams(e) {
         const { players } = this.state;
-        const { teamOne } = this.state;
-        const { teamTwo } = this.state;
+        // const { teamOne } = this.state;
+        // const { teamTwo } = this.state;
         e.preventDefault();
         this.setState({ submitted: true });
-        this.props.handleSubmitTeams(players, teamOne, teamTwo)
+        this.props.handleSubmitTeams(players)
+        // this.props.handleSubmitTeams(teamOne)
+        // this.props.handleSubmitTeams(teamTwo)
     }
 
     handleReset(e) {
@@ -67,13 +68,13 @@ class PlayerInput extends Component {
                     <div className="playerInputForm">
 
                         <div className="form">
-                            <form onSubmit={this.handleSubmit}>
+                            <form onSubmit={ this.handleSubmit }>
                                 <h1 className="title">Name Your Players</h1>
                                 <p>Enter 10 Player Names & Then Click <strong>'Randomise Teams'</strong> To Randomly Generate Two Teams..</p>
                                 <div className="formGroup">
                                     <input
-                                        onChange={this.handleChange}
-                                        value={playerName}
+                                        onChange={ this.handleChange }
+                                        value={ playerName }
                                         placeholder="Enter Player Name.."
                                         required>
                                     </input>
@@ -88,7 +89,7 @@ class PlayerInput extends Component {
                                 {players.map((player, index) =>
                                     <li
                                         className="playerListItem">
-                                        <label>Player{index + 1}:  </label>
+                                        <label>Player{ index + 1 } :  </label>
                                         {player}
                                     </li>
                                 )}
@@ -115,7 +116,7 @@ class PlayerInput extends Component {
                             </thead>
                             <tbody>
                                 {teamOne.map((player, index) => (
-                                    <tr>Player{index + 1 }:{ player }</tr>
+                                    <tr>Player{ index + 1} : { player }</tr>
                                 ))}
                             </tbody>
                         </table>

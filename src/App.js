@@ -7,8 +7,8 @@ import {
 import './App.css';
 
 import Home from "./Components/Home";
-import PlayerPlatform from "./Components/PlayerPlatform";
 import PlayerInput from './Components/PlayerInput/PlayerInput';
+import PlayerPlatform from './Components/PlayerPlatform';
 
 
 const App =({

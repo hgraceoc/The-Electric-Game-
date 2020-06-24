@@ -30,41 +30,41 @@ let shuffle = (state, action) => {
 }
 
 //once teams are shuffled, split them in half!
-// let splitTeams = (state, action) => {
-//     let players = state.players;
-//     let team1 = players.filter((_, index) => index < players.length % 2 === 0)
-//     let team2 = players.filter((_, index) => index > players.length % 2 === 0)
-
-//     return {
-//         ...state, 
-//         teamOne: [ 
-//             ...state.teamOne,
-//             team1,
-//             action.teamOne,
-//         ]
-//         ,
-//         teamTwo: [
-//             ...state.teamTwo,
-//             team2,
-//             action.teamTwo
-//         ]
-//     }
-// }
-
-let splitTeams = (state) => {
+let splitTeams = (state, action) => {
     let players = state.players;
+    let team1 = players.filter((_, index) => index < players.length % 2 === 0)
+    let team2 = players.filter((_, index) => index > players.length % 2 === 0)
+
     return {
-        ...state,
-        teamOne: [
-            state.players.filter((_, index) => index < players.length % 2 === 0)
-        ],
-
+        ...state, 
+        teamOne: [ 
+            ...state.teamOne,
+            team1,
+            action.teamOne,
+        ]
+        ,
         teamTwo: [
-            state.players.filter((_, index) => index < players.length % 2 === 0)
-        ],
-
+            ...state.teamTwo,
+            team2,
+            action.teamTwo
+        ]
     }
 }
+
+// let splitTeams = (state) => {
+//     let players = state.players;
+//     return {
+//         ...state,
+//         teamOne: [
+//             state.players.filter((_, index) => index < players.length % 2 === 0)
+//         ],
+
+//         teamTwo: [
+//             state.players.filter((_, index) => index < players.length % 2 === 0)
+//         ],
+
+//     }
+// }
 
 
 const reducer = (state, action) => {
