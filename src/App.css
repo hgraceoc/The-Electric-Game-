@@ -33,18 +33,12 @@ html,body {
 }
 
 
-.gridWrapper {
-  display: block;
+@media only screen and (max-width: 900px) {
+  .header {
+    display: none;
+  }
 }
 
-.header {
-  height: 200px;
-}
-
-.main {
-  display: grid;
-  grid-area: main;
-}
 
 .background {
   background-image: url(../src/imgs/background.jpg);
@@ -219,6 +213,7 @@ text-align: center;
   position: fixed;
   width: 250px;
 }
+
 
 .editButton {
   top : 100px;

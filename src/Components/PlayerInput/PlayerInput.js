@@ -62,7 +62,6 @@ class PlayerInput extends Component {
     }
 
 
-
     render() {
         const { players } = this.props;
         //player inputs are stored in local state, but the players array we are accessing from the store
@@ -86,118 +85,117 @@ class PlayerInput extends Component {
         // randomise team button - submits form, which then hides form and displays two team tables 
         return (
             <>
-                <div className="header">
-                    <button
-                        onClick={this.handleReset}
-                        className="formButton resetButton"
-                        type="submit">
-                        Reset!
-                    </button>
-                    {submitted ? (
+                <div className="wrapper">
                         <button
-                            onClick={this.handleEditPlayers}
-                            className="formButton editButton"
+                            onClick={this.handleReset}
+                            className="formButton resetButton"
                             type="submit">
-                            Edit Players
-                        </button>) : null}
-                </div>
+                            Reset!
+                    </button>
+                        {submitted ? (
+                            <button
+                                onClick={this.handleEditPlayers}
+                                className="formButton editButton"
+                                type="submit">
+                                Edit Players
+                            </button>) : null}
 
-                <div className="main">
 
-                {!submitted ? (
-                    <div className="playerInputForm">
+                    {!submitted ? (
+                        <div className="playerInputForm">
 
-                        <div className="form">
-                            <form onSubmit={this.handleSubmit}>
-                                <h1 className="title">Name Your Players</h1>
-                                <p>Enter Your Player Names & Then Click <strong>'Randomise Teams'</strong> To Generate Two Random Teams..</p>
-                                <div className="formGroup">
-                                    <input
-                                        onChange={this.handleChange}
-                                        value={playerName}
-                                        placeholder="Enter Player Name.."
-                                        required>
-                                    </input>
+                            <div className="form">
+                                <form onSubmit={this.handleSubmit}>
+                                    <h1 className="title">Name Your Players</h1>
+                                    <p>Enter Your Player Names & Then Click <strong>'Randomise Teams'</strong> To Generate Two Random Teams..</p>
+                                    <div className="formGroup">
+                                        <input
+                                            onChange={this.handleChange}
+                                            value={playerName}
+                                            placeholder="Enter Player Name.."
+                                            required>
+                                        </input>
 
-                                </div>
-                                <button
-                                    className="formButton"
-                                    type="submit">
-                                    Add Player</button>
-                            </form>
-                            <ul className="playerList">
-                                {players.map((player, index) =>
-                                    <>
-                                        <li
-                                            key={index}
-                                            className="playerListItem">
-                                            <label className="playerLabel">Player{index + 1} :  </label>
-                                            {player}
-                                        </li>
-                                        <button
-                                            className="removePlayerButton"
-                                            onClick={() => this.handleRemovePlayer(player.id)}>Remove Player
+                                    </div>
+                                    <button
+                                        className="formButton"
+                                        type="submit">
+                                        Add Player</button>
+                                </form>
+                                <ul className="playerList">
+                                    {players.map((player, index) =>
+                                        <>
+                                            <li
+                                                key={index}
+                                                className="playerListItem">
+                                                <label className="playerLabel">Player{index + 1} :  </label>
+                                                {player}
+                                            </li>
+                                            <button
+                                                className="removePlayerButton"
+                                                onClick={() => this.handleRemovePlayer(player.id)}>Remove Player
                                     </button>
-                                    </>
-                                )}
-                            </ul>
+                                        </>
+                                    )}
+                                </ul>
+                            </div>
                         </div>
-                    </div>
-                ) : null}
+                    ) : null}
 
 
-                {!submitted ? (
-                <div className="submitTeamButtonContainer">
-                    <button
-                        onClick={this.handleSubmitTeams}
-                        className="formButton submitTeamButton"
-                        type="submit">
-                        Randomise Teams!
+                    {!submitted ? (
+                        <div className="submitTeamButtonContainer">
+                            <button
+                                onClick={this.handleSubmitTeams}
+                                className="formButton submitTeamButton"
+                                type="submit">
+                                Randomise Teams!
                             </button>
-                </div> ) : null }
-    
+                        </div>) : null}
 
-                {submitted ? (
-                    <>
-                        <div className="teamTables">
-                            <table className="teamTable">
-                                <thead>
-                                    <tr>
-                                        <th className="title">Team One</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    {teamOne.map((player, index) => (
-                                        <tr
-                                            key={index}>
-                                            <strong>Player{index + 1} : </strong>{player}
-                                        </tr>
-                                    ))}
-                                </tbody>
-                            </table>
 
-                            <div>
+                    {submitted ? (
+                        <>
+                            <div className="teamTables">
                                 <table className="teamTable">
                                     <thead>
                                         <tr>
-                                            <th className="title">Team Two</th>
+                                            <th className="title">Team One</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        {teamTwo.map((player, index) => (
+                                        {teamOne.map((player, index) => (
                                             <tr
                                                 key={index}>
-                                                <strong>Player{index + 1}: </strong>{player}
+                                                <strong>Player{index + 1} : </strong>{player}
                                             </tr>
                                         ))}
                                     </tbody>
                                 </table>
+
+                                <div>
+                                    <table className="teamTable">
+                                        <thead>
+                                            <tr>
+                                                <th className="title">Team Two</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            {teamTwo.map((player, index) => (
+                                                <tr
+                                                    key={index}>
+                                                    <strong>Player{index + 1}: </strong>{player}
+                                                </tr>
+                                            ))}
+                                        </tbody>
+                                    </table>
+                                </div>
                             </div>
-                        </div>
-                    </>
-                ) : null}
+                        </>
+                    ) : null}
 
                 </div>
+
 
             </>
         )
