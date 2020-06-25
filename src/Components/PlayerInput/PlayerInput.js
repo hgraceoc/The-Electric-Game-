@@ -85,22 +85,6 @@ class PlayerInput extends Component {
         // randomise team button - submits form, which then hides form and displays two team tables 
         return (
             <>
-                <div className="wrapper">
-                        <button
-                            onClick={this.handleReset}
-                            className="formButton resetButton"
-                            type="submit">
-                            Reset!
-                    </button>
-                        {submitted ? (
-                            <button
-                                onClick={this.handleEditPlayers}
-                                className="formButton editButton"
-                                type="submit">
-                                Edit Players
-                            </button>) : null}
-
-
                     {!submitted ? (
                         <div className="playerInputForm">
 
@@ -151,7 +135,14 @@ class PlayerInput extends Component {
                                 type="submit">
                                 Randomise Teams!
                             </button>
-                        </div>) : null}
+
+                            <button
+                                onClick={this.handleReset}
+                                className="formButton resetButton1"
+                                type="submit">
+                                Reset!
+                            </button>
+                            </div>) : null}
 
 
                     {submitted ? (
@@ -191,12 +182,25 @@ class PlayerInput extends Component {
                                     </table>
                                 </div>
                             </div>
+
+                            <div class="buttons">                
+                            <button
+                                onClick={this.handleEditPlayers}
+                                className="formButton editButton"
+                                type="submit">
+                                Edit Players
+                            </button>
+
+                            <button
+                                onClick={this.handleReset}
+                                className="formButton resetButton1"
+                                type="submit">
+                                Reset!
+                            </button>
+
+                            </div>  
                         </>
                     ) : null}
-
-                </div>
-
-
             </>
         )
     }

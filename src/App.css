@@ -24,20 +24,15 @@
 
 
 html,body {
-  height: 100vh;
   display: flex;
   justify-content: center;
   height: 100vh;
   width: 100vw;
   font-family: 'Muli', sans-serif;
+  background-position: fixed;
+  position: fixed;
 }
 
-
-@media only screen and (max-width: 900px) {
-  .header {
-    display: none;
-  }
-}
 
 
 .background {
@@ -50,6 +45,7 @@ html,body {
   z-index: 0;
   overflow-Y: scroll;
 }
+
 
 .platformLayout {
   align-items: center;
@@ -129,7 +125,7 @@ html,body {
   max-height: 900px;
 	position: relative;
   border-radius: 15px;
-  padding: 2rem;
+  padding: 1rem;
   margin: auto;
   margin-top: 2rem;
   margin-bottom: 2rem;
@@ -156,7 +152,7 @@ html,body {
 
 .title {
   font-family: 'Shrikhand', Cursive;
-  font-size: calc(30px + 3vmin);
+  font-size: calc(27px + 3vmin);
   padding-bottom: 1rem;
 }
 
@@ -179,14 +175,14 @@ input {
 .formButton {
   background-color:var(--lightYellow);
   border: none;
-  padding: 25px 40px;
+  padding: 20px 30px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 30px;
+  font-size: 25px;
   font-family: 'Muli', sans-serif;
   font-weight: bold;
-  margin: 2rem;
+  margin: 1rem;
   overflow: scroll;
 }
 
@@ -201,25 +197,13 @@ text-align: center;
 
 .submitTeamButton {
   margin: auto;
-  margin-top: 1rem;
   margin-bottom: 2rem;
 }
 
-
-.resetButton {
+.buttons {
+  flex-wrap: wrap;
   text-align: center;
-  top : 0;
-  right : 0;
-  position: fixed;
-  width: 250px;
-}
-
-
-.editButton {
-  top : 100px;
-  right : 0px;
-  position: fixed;
-  width: 250px;
+  padding: 0rem, 2rem;
 }
 
 .removePlayerButton {
@@ -252,12 +236,12 @@ text-align: center;
 /* Table Styling */
 
 .teamTables {
-  margin-top: 25vh;
   display: flex;
   align-items: center;
   text-align: center;
   justify-content: center;
   flex-wrap: wrap;
+  margin-top: 3rem;
   
 }
 
@@ -266,7 +250,6 @@ text-align: center;
   height: 700px;
 	width: 30rem;
   border-radius: 15px;
-  margin-top: 2rem;
   padding: 2rem;
   text-align: center;
   overflow: scroll;
