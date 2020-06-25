@@ -19,6 +19,10 @@ class PlayerInput extends Component {
 
         this.handleSubmitTeams = this.handleSubmitTeams.bind(this);
 
+        this.handleEditPlayers = this.handleEditPlayers.bind(this);
+
+        this.handleRemovePlayer = this.handleRemovePlayer.bind(this);
+
         this.handleReset = this.handleReset.bind(this);
     }
 
@@ -39,13 +43,22 @@ class PlayerInput extends Component {
         this.setState({ submitted: true });
         this.props.handleSubmitTeams(players)
         //change state of submitted to true, so as to show and hide appropriate elements 
+    }
 
+    handleEditPlayers(e) {
+        const { playerName } = this.state;
+        this.props.handleEditPlayers(playerName)
+        this.setState({ submitted: false })
     }
 
     handleReset(e) {
         this.props.handleReset()
         this.setState({ submitted: false })
         //take user back to empty form 
+    }
+
+    handleRemovePlayer(e) {
+        this.props.handleRemovePlayer()
     }
 
 
@@ -103,12 +116,18 @@ class PlayerInput extends Component {
                             </form>
                             <ul className="playerList">
                                 {players.map((player, index) =>
-                                    <li
-                                        key={index}
-                                        className="playerListItem">
-                                        <label className="playerLabel">Player{index + 1} :  </label>
-                                        {player}
-                                    </li>
+                                    <>
+                                        <li
+                                            key={index}
+                                            className="playerListItem">
+                                            <label className="playerLabel">Player{index + 1} :  </label>
+                                            {player}
+                                        </li>
+                                        <button
+                                            className="removePlayerButton"
+                                            onClick={() => this.handleRemovePlayer(player.id)}>Remove Player
+                                    </button>
+                                    </>
                                 )}
                             </ul>
                         </div>
@@ -158,6 +177,13 @@ class PlayerInput extends Component {
                                     ))}
                                 </tbody>
                             </table>
+
+                            <button
+                                onClick={this.handleEditPlayers}
+                                className="formButton editButton"
+                                type="submit">
+                                Edit Players
+                            </button>
                         </div>
                     </>
                 ) : null}

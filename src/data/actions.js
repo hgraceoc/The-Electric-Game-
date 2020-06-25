@@ -12,6 +12,20 @@ export const shuffle = (playerName) => {
     };
 };
 
+export const editPlayers = (playerName) => {
+    return {
+        type: "EDIT_PLAYERS",
+        playerName,
+    };
+};
+
+export const removePlayer = (playerName) => {
+    return {
+        type: "REMOVE_PLAYER",
+        playerName,
+    };
+};
+
 export const reset = () => {
     return {
         type: "RESET",

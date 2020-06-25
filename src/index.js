@@ -19,6 +19,7 @@ ReactDOM.render(
       addPlayer={() => store.dispatch({ type: "ADD_PLAYER" })}
       reset={() => store.dispatch({ type: "RESET" })}
       shuffle={() => store.dispatch({ type: "SHUFFLE" })}
+      removePlayer={() => store.dispatch({ type: "REMOVE_PLAYER" })}
       />
     </Provider>
   </React.StrictMode>,

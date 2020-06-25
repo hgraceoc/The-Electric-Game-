@@ -11,6 +11,20 @@ const addPlayer = (state, action) => {
     }
 }
 
+const editPlayers = (state) =>  { 
+    return  { 
+      ...state, 
+      submitted: false,
+    } 
+  };
+
+const removePlayer = (state, action) => {
+    return {
+        ...state, 
+        players: state.players.filter((playerName) => playerName.id !== action.id)
+    }
+}
+
 //reducer to reset the form, when user clicks reset button
 const reset = (state) => {
     return {
@@ -34,6 +48,7 @@ const reducer = (state, action) => {
     switch (action.type) {
         case "ADD_PLAYER": return addPlayer(state, action);
         case "SHUFFLE": return shuffle(state, action);
+        case "REMOVE_PLAYER": return removePlayer(state,action);
         case "RESET": return reset(state, action);
         default: return state;
     }
