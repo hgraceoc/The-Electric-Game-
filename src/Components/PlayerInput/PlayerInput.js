@@ -80,19 +80,30 @@ class PlayerInput extends Component {
 
         //displayed below:
         // reset button - take user back to empty form 
+        // edit players button - appears when form is submitted 
         // playerName form  - user inputs n amount of player names 
         // add player button renders new player to list
         // randomise team button - submits form, which then hides form and displays two team tables 
         return (
             <>
-                <div>
+                <div className="header">
                     <button
                         onClick={this.handleReset}
                         className="formButton resetButton"
                         type="submit">
                         Reset!
                     </button>
+                    {submitted ? (
+                        <button
+                            onClick={this.handleEditPlayers}
+                            className="formButton editButton"
+                            type="submit">
+                            Edit Players
+                        </button>) : null}
                 </div>
+
+                <div className="main">
+
                 {!submitted ? (
                     <div className="playerInputForm">
 
@@ -131,15 +142,20 @@ class PlayerInput extends Component {
                                 )}
                             </ul>
                         </div>
-                        <div className="submitTeamButtonContainer">
-                            <button
-                                onClick={this.handleSubmitTeams}
-                                className="formButton submitTeamButton"
-                                type="submit">
-                                Randomise Teams!</button>
-                        </div>
                     </div>
                 ) : null}
+
+
+                {!submitted ? (
+                <div className="submitTeamButtonContainer">
+                    <button
+                        onClick={this.handleSubmitTeams}
+                        className="formButton submitTeamButton"
+                        type="submit">
+                        Randomise Teams!
+                            </button>
+                </div> ) : null }
+    
 
                 {submitted ? (
                     <>
@@ -159,34 +175,29 @@ class PlayerInput extends Component {
                                     ))}
                                 </tbody>
                             </table>
-                        </div>
 
-                        <div>
-                            <table className="teamTable">
-                                <thead>
-                                    <tr>
-                                        <th className="title">Team Two</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    {teamTwo.map((player, index) => (
-                                        <tr
-                                            key={index}>
-                                            <strong>Player{index + 1}: </strong>{player}
+                            <div>
+                                <table className="teamTable">
+                                    <thead>
+                                        <tr>
+                                            <th className="title">Team Two</th>
                                         </tr>
-                                    ))}
-                                </tbody>
-                            </table>
-
-                            <button
-                                onClick={this.handleEditPlayers}
-                                className="formButton editButton"
-                                type="submit">
-                                Edit Players
-                            </button>
+                                    </thead>
+                                    <tbody>
+                                        {teamTwo.map((player, index) => (
+                                            <tr
+                                                key={index}>
+                                                <strong>Player{index + 1}: </strong>{player}
+                                            </tr>
+                                        ))}
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </>
                 ) : null}
+
+                </div>
 
             </>
         )
