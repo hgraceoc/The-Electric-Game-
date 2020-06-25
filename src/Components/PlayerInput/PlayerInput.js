@@ -46,14 +46,14 @@ class PlayerInput extends Component {
         this.props.handleReset()
         this.setState({ submitted: false })
     }
-    
+
 
     render() {
         const { players } = this.props;
-                //player inputs are stored in local state, but the players array we are accessing from the store
+        //player inputs are stored in local state, but the players array we are accessing from the store
         const { playerName } = this.state;
         const { submitted } = this.state;
-     
+
 
         let teamOne = players.filter((_, index) => {
             return index < players.length / 2;
@@ -66,17 +66,25 @@ class PlayerInput extends Component {
 
         return (
             <>
+                <div>
+                    <button
+                        onClick={this.handleReset}
+                        className="formButton resetButton"
+                        type="submit">
+                        Reset!
+                    </button>
+                </div>
                 {!submitted ? (
                     <div className="playerInputForm">
 
                         <div className="form">
-                            <form onSubmit={ this.handleSubmit }>
+                            <form onSubmit={this.handleSubmit}>
                                 <h1 className="title">Name Your Players</h1>
-                                <p>Enter 10 Player Names & Then Click <strong>'Randomise Teams'</strong> To Randomly Generate Two Teams..</p>
+                                <p>Enter Your Player Names & Then Click <strong>'Randomise Teams'</strong> To Randomly Generate Two Teams..</p>
                                 <div className="formGroup">
                                     <input
-                                        onChange={ this.handleChange }
-                                        value={ playerName }
+                                        onChange={this.handleChange}
+                                        value={playerName}
                                         placeholder="Enter Player Name.."
                                         required>
                                     </input>
@@ -91,7 +99,7 @@ class PlayerInput extends Component {
                                 {players.map((player, index) =>
                                     <li
                                         className="playerListItem">
-                                        <label className="playerLabel">Player{ index + 1 } :  </label>
+                                        <label className="playerLabel">Player{index + 1} :  </label>
                                         {player}
                                     </li>
                                 )}
@@ -109,46 +117,38 @@ class PlayerInput extends Component {
 
                 {submitted ? (
                     <>
-                    <div class="teamTables">
-                        <table className="teamTable">
-                            <thead>
-                                <tr>
-                                    <th className="title">Team One</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                {teamOne.map((player, index) => (
-                                    <tr>Player{ index + 1} : { player }</tr>
-                                ))}
-                            </tbody>
-                        </table>
-                    </div>
+                        <div class="teamTables">
+                            <table className="teamTable">
+                                <thead>
+                                    <tr>
+                                        <th className="title">Team One</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {teamOne.map((player, index) => (
+                                        <tr>Player{ index + 1} : { player}</tr>
+                                    ))}
+                                </tbody>
+                            </table>
+                        </div>
 
-                    <div>
-                        <table className="teamTable">
-                            <thead>
-                                <tr>
-                                    <th className="title">Team Two</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                {teamTwo.map((player, index) => (
-                                    <tr>Player{index + 1}:{ player }</tr>
-                                ))}
-                            </tbody>
-                        </table>
-                    </div>
+                        <div>
+                            <table className="teamTable">
+                                <thead>
+                                    <tr>
+                                        <th className="title">Team Two</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {teamTwo.map((player, index) => (
+                                        <tr><strong>Player{index + 1}:</strong>{player}</tr>
+                                    ))}
+                                </tbody>
+                            </table>
+                        </div>
                     </>
-                    ) : null}
+                ) : null}
 
-                <div>
-                    <button
-                        onClick={this.handleReset}
-                        className="formButton resetButton"
-                        type="submit">
-                        Reset!
-                    </button>
-                </div>
             </>
         )
     }

@@ -192,6 +192,9 @@ text-align: center;
 
 .resetButton {
   text-align: center;
+  top : 0;
+    right : 0;
+    position: fixed;
 }
 
 .playerList {
