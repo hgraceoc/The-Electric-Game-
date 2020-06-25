@@ -12,12 +12,6 @@ export const shuffle = (playerName) => {
     };
 };
 
-export const splitTeams = () => {
-    return {
-        type: "SPLIT",
-    }
-}
-
 export const reset = () => {
     return {
         type: "RESET",

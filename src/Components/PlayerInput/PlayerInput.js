@@ -36,30 +36,32 @@ class PlayerInput extends Component {
 
     handleSubmitTeams(e) {
         const { players } = this.state;
-        const { teamOne } = this.state;
-        const { teamTwo } = this.state;
         e.preventDefault();
         this.setState({ submitted: true });
         this.props.handleSubmitTeams(players)
-        this.props.handleSubmitTeams(teamOne)
-        this.props.handleSubmitTeams(teamTwo)
+
     }
 
     handleReset(e) {
         this.props.handleReset()
         this.setState({ submitted: false })
     }
+    
 
     render() {
         const { players } = this.props;
+                //player inputs are stored in local state, but the players array we are accessing from the store
         const { playerName } = this.state;
         const { submitted } = this.state;
-        const { teamOne } = this.props;
-        const { teamTwo } = this.props;
+     
 
+        let teamOne = players.filter((_, index) => {
+            return index < players.length / 2;
+        });
 
-        //player inputs are stored in local state, but the players array we are accessing from the store 
-        console.log(players)
+        let teamTwo = players.filter((_, index) => {
+            return index >= players.length / 2;
+        });
 
 
         return (
