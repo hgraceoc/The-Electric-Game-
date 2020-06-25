@@ -99,7 +99,7 @@ class PlayerInput extends Component {
                         <div className="form">
                             <form onSubmit={this.handleSubmit}>
                                 <h1 className="title">Name Your Players</h1>
-                                <p>Enter Your Player Names & Then Click <strong>'Randomise Teams'</strong> To Randomly Generate Two Teams..</p>
+                                <p>Enter Your Player Names & Then Click <strong>'Randomise Teams'</strong> To Generate Two Random Teams..</p>
                                 <div className="formGroup">
                                     <input
                                         onChange={this.handleChange}
