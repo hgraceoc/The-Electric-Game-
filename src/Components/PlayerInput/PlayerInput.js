@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import inital from "../../data/initial";
 
 class PlayerInput extends Component {
 
@@ -39,13 +38,16 @@ class PlayerInput extends Component {
         e.preventDefault();
         this.setState({ submitted: true });
         this.props.handleSubmitTeams(players)
+        //change state of submitted to true, so as to show and hide appropriate elements 
 
     }
 
     handleReset(e) {
         this.props.handleReset()
         this.setState({ submitted: false })
+        //take user back to empty form 
     }
+
 
 
     render() {
@@ -63,7 +65,11 @@ class PlayerInput extends Component {
             return index >= players.length / 2;
         });
 
-
+        //displayed below:
+        // reset button - take user back to empty form 
+        // playerName form  - user inputs n amount of player names 
+        // add player button renders new player to list
+        // randomise team button - submits form, which then hides form and displays two team tables 
         return (
             <>
                 <div>
@@ -98,6 +104,7 @@ class PlayerInput extends Component {
                             <ul className="playerList">
                                 {players.map((player, index) =>
                                     <li
+                                        key={index}
                                         className="playerListItem">
                                         <label className="playerLabel">Player{index + 1} :  </label>
                                         {player}
@@ -117,7 +124,7 @@ class PlayerInput extends Component {
 
                 {submitted ? (
                     <>
-                        <div class="teamTables">
+                        <div className="teamTables">
                             <table className="teamTable">
                                 <thead>
                                     <tr>
@@ -126,7 +133,10 @@ class PlayerInput extends Component {
                                 </thead>
                                 <tbody>
                                     {teamOne.map((player, index) => (
-                                        <tr>Player{ index + 1} : { player}</tr>
+                                        <tr
+                                            key={index}>
+                                            <strong>Player{index + 1} : </strong>{player}
+                                        </tr>
                                     ))}
                                 </tbody>
                             </table>
@@ -141,7 +151,10 @@ class PlayerInput extends Component {
                                 </thead>
                                 <tbody>
                                     {teamTwo.map((player, index) => (
-                                        <tr><strong>Player{index + 1}:</strong>{player}</tr>
+                                        <tr
+                                            key={index}>
+                                            <strong>Player{index + 1}: </strong>{player}
+                                        </tr>
                                     ))}
                                 </tbody>
                             </table>

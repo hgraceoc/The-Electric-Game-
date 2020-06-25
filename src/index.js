@@ -9,8 +9,6 @@ import persistState from "redux-localstorage";
 import thunk from "redux-thunk";
 
 import store from "./data/store";
-import initial from "../src/data/initial";
-import reducer from "../src/data/reducers";
 
 import { Provider } from "react-redux";
 
