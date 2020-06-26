@@ -10,6 +10,7 @@ class PlayerInput extends Component {
             submitted: false,
             teamOne: [],
             teamTwo: [],
+            valid: false,
         };
         //store playerName input locally 
 
@@ -61,6 +62,15 @@ class PlayerInput extends Component {
         this.props.handleRemovePlayer()
     }
 
+   //helper function to split players into two equal teams of 5
+   pickTeams = (players, numberOfPlayers) => {
+       let teams = [], i = 0, n = players.length;
+        while (i < n) {
+          teams.push(players.slice(i, i += numberOfPlayers));
+        }
+        return teams;
+    }
+
 
     render() {
         const { players } = this.props;
@@ -68,19 +78,17 @@ class PlayerInput extends Component {
         const { playerName } = this.state;
         const { submitted } = this.state;
 
+        const teams = this.pickTeams(players, 5)
 
-        let teamOne = players.filter((_, index) => {
-            return index < players.length / 2;
-        });
+        const teamOne = teams.length > 0 && teams[0]
+        const teamTwo = teams.length > 1 && teams[1]
 
-        let teamTwo = players.filter((_, index) => {
-            return index >= players.length / 2;
-        });
+    
 
         //displayed below:
         // reset button - take user back to empty form 
         // edit players button - appears when form is submitted 
-        // playerName form  - user inputs n amount of player names 
+        // playerName form  - user inputs 10 player names 
         // add player button renders new player to list
         // randomise team button - submits form, which then hides form and displays two team tables 
         return (
@@ -91,7 +99,7 @@ class PlayerInput extends Component {
                             <div className="form">
                                 <form onSubmit={this.handleSubmit}>
                                     <h1 className="title">Name Your Players</h1>
-                                    <p>Enter Your Player Names & Then Click <strong>'Randomise Teams'</strong> To Generate Two Random Teams..</p>
+                                    <p>Enter 10 Player Names & Then Click <strong>'Randomise Teams'</strong> To Generate Two Random Teams..</p>
                                     <div className="formGroup">
                                         <input
                                             onChange={this.handleChange}
@@ -117,7 +125,7 @@ class PlayerInput extends Component {
                                             </li>
                                             <button
                                                 className="removePlayerButton"
-                                                onClick={() => this.handleRemovePlayer(player.id)}>Remove Player
+                                                onClick={() => this.handleRemovePlayer(playerName)}>Remove Player
                                     </button>
                                         </>
                                     )}
