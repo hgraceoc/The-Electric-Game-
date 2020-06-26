@@ -10,6 +10,7 @@ import { addPlayer, reset, shuffle, removePlayer, editPlayers } from "../../data
       players: state.players,
       teamOne: state.teamOne,
       teamTwo: state.teamTwo,
+      playerName: state.playerName,
   };
 
 };

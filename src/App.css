@@ -131,8 +131,8 @@ html,body {
   margin-bottom: 2rem;
   overflow: scroll;
   text-overflow: ellipsis;
-
 }
+
 
 .playerInputForm::after {
   opacity: .8;

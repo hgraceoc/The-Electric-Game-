@@ -14,6 +14,7 @@ const addPlayer = (state, action) => {
 const editPlayers = (state) =>  { 
     return  { 
       ...state, 
+      players: state.players,
       submitted: false,
     } 
   };

@@ -59,7 +59,8 @@ class PlayerInput extends Component {
     }
 
     handleRemovePlayer(e) {
-        this.props.handleRemovePlayer()
+        const { playerName } = this.state;
+        this.props.handleRemovePlayer(playerName.id)
     }
 
    //helper function to split players into two equal teams of 5
@@ -70,6 +71,7 @@ class PlayerInput extends Component {
         }
         return teams;
     }
+    
 
 
     render() {
@@ -78,10 +80,16 @@ class PlayerInput extends Component {
         const { playerName } = this.state;
         const { submitted } = this.state;
 
+        let validNumberOfPlayers = (players.length === 10)
+
         const teams = this.pickTeams(players, 5)
 
-        const teamOne = teams.length > 0 && teams[0]
-        const teamTwo = teams.length > 1 && teams[1]
+        const teamOne = teams.length > 0 && teams[0].map((player, index) => {
+            return <h3>{player}</h3>
+        })
+        const teamTwo = teams.length > 1 && teams[1].map((player, index) => {
+            return <h3>{player}</h3>
+        })
 
     
 
@@ -99,7 +107,7 @@ class PlayerInput extends Component {
                             <div className="form">
                                 <form onSubmit={this.handleSubmit}>
                                     <h1 className="title">Name Your Players</h1>
-                                    <p>Enter 10 Player Names & Then Click <strong>'Randomise Teams'</strong> To Generate Two Random Teams..</p>
+                                    <p>Enter <strong>10 Player Names</strong> & Then Click <strong>'Randomise Teams'</strong> To Generate Two Random Teams..</p>
                                     <div className="formGroup">
                                         <input
                                             onChange={this.handleChange}
@@ -135,14 +143,15 @@ class PlayerInput extends Component {
                     ) : null}
 
 
-                    {!submitted ? (
+                    
                         <div className="submitTeamButtonContainer">
+                        {!submitted && players.length === 10 ? (  
                             <button
                                 onClick={this.handleSubmitTeams}
                                 className="formButton submitTeamButton"
                                 type="submit">
                                 Randomise Teams!
-                            </button>
+                            </button> ) : null}
 
                             <button
                                 onClick={this.handleReset}
@@ -150,7 +159,7 @@ class PlayerInput extends Component {
                                 type="submit">
                                 Reset!
                             </button>
-                            </div>) : null}
+                            </div>
 
 
                     {submitted ? (
@@ -163,12 +172,11 @@ class PlayerInput extends Component {
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        {teamOne.map((player, index) => (
-                                            <tr
-                                                key={index}>
-                                                <strong>Player{index + 1} : </strong>{player}
+                                        
+                                            <tr>
+                                               {teamOne}
                                             </tr>
-                                        ))}
+                                       
                                     </tbody>
                                 </table>
 
@@ -180,18 +188,18 @@ class PlayerInput extends Component {
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            {teamTwo.map((player, index) => (
-                                                <tr
-                                                    key={index}>
-                                                    <strong>Player{index + 1}: </strong>{player}
+                                            
+                                                <tr>
+                                                    {teamTwo}
+                                                    
                                                 </tr>
-                                            ))}
+                                        
                                         </tbody>
                                     </table>
                                 </div>
                             </div>
 
-                            <div class="buttons">                
+                            <div className="buttons">                
                             <button
                                 onClick={this.handleEditPlayers}
                                 className="formButton editButton"
