@@ -85,10 +85,10 @@ class PlayerInput extends Component {
         const teams = this.pickTeams(players, 5)
 
         const teamOne = teams.length > 0 && teams[0].map((player, index) => {
-            return <h3>{player}</h3>
+            return <h3>Player{ index + 1 }: { player }</h3>
         })
         const teamTwo = teams.length > 1 && teams[1].map((player, index) => {
-            return <h3>{player}</h3>
+            return <h3>Player{ index + 1 }: { player }</h3>
         })
 
 
