@@ -19,10 +19,10 @@ export const editPlayers = (playerName) => {
     };
 };
 
-export const removePlayer = (players) => {
+export const removePlayer = (index) => {
     return {
         type: "REMOVE_PLAYER",
-        players,
+        index: index,
     };
 };
 
