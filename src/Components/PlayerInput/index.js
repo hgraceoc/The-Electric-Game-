@@ -22,7 +22,7 @@ const mapDispatchToProps = dispatch => {
 
       handleSubmitTeams: players => dispatch(shuffle(addPlayer(players))),   
 
-      handleRemovePlayer: (id) => dispatch(removePlayer(id)),
+      handleRemovePlayer: (index) => dispatch(removePlayer(index)),
 
       handleReset: state => dispatch(reset(state)),    
   };

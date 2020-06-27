@@ -32,15 +32,15 @@ class PlayerInput extends Component {
     }
 
     handleSubmit(e) {
-        const { playerName } = this.state;
         e.preventDefault();
+        const { playerName } = this.state;
         this.props.handleSubmit(playerName)
         this.setState({ playerName: "" })
     }
 
     handleSubmitTeams(e) {
-        const { players } = this.state;
         e.preventDefault();
+        const { players } = this.state;
         this.setState({ submitted: true });
         this.props.handleSubmitTeams(players)
         //change state of submitted to true, so as to show and hide appropriate elements 
@@ -58,10 +58,9 @@ class PlayerInput extends Component {
         //take user back to empty form 
     }
 
-    handleRemovePlayer(e) {
+    handleRemovePlayer(e, index) {
         const { players } = this.props;
-
-        this.props.handleRemovePlayer(players.id)
+        this.props.handleRemovePlayer(index)
     }
 
     //helper function to split players into two equal teams of 5
@@ -143,7 +142,7 @@ class PlayerInput extends Component {
                                         </li>
                                         <button
                                             className="removePlayerButton"
-                                            onClick={() => this.handleRemovePlayer(this.props.id)}>Remove Player
+                                            onClick={e => this.handleRemovePlayer(e, index)}>Remove Player
                                     </button>
                                     </>
                                 )}

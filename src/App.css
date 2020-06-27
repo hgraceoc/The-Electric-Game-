@@ -126,7 +126,7 @@ html,body {
   border-radius: 15px;
   padding: 1rem;
   margin: auto;
-  margin-top: 2rem;
+  margin-top: 3rem;
   margin-bottom: 2rem;
   overflow: scroll;
 }
@@ -225,7 +225,7 @@ text-align: center;
   text-align: center;
   justify-content: center;
   flex-wrap: wrap;
-  margin-top: 3rem;
+  margin-top: 4rem;
   
 }
 

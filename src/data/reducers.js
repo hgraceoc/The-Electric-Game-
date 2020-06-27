@@ -17,11 +17,11 @@ const editPlayers = (state) =>  {
     } 
   };
 
-const removePlayer = (state, action) => {
-    return {
-        players: state.players.filter((player) => player.id !== action.id)
-    }
-}
+const removePlayer = (state, { index }) => ({
+    ...state,
+    players: state.players.filter((_, i) => i !== index)
+});
+
 
 //reducer to reset the form, when user clicks reset button
 const reset = (state) => {
