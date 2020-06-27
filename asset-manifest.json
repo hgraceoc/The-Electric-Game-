@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/The-Electric-Game-/static/css/main.d9e52e67.chunk.css",
+    "main.js": "/The-Electric-Game-/static/js/main.627ad7b2.chunk.js",
+    "main.js.map": "/The-Electric-Game-/static/js/main.627ad7b2.chunk.js.map",
+    "runtime-main.js": "/The-Electric-Game-/static/js/runtime-main.f5ec484d.js",
+    "runtime-main.js.map": "/The-Electric-Game-/static/js/runtime-main.f5ec484d.js.map",
+    "static/js/2.b21629a6.chunk.js": "/The-Electric-Game-/static/js/2.b21629a6.chunk.js",
+    "static/js/2.b21629a6.chunk.js.map": "/The-Electric-Game-/static/js/2.b21629a6.chunk.js.map",
+    "index.html": "/The-Electric-Game-/index.html",
+    "precache-manifest.6a86c80292e794583b026004c0843209.js": "/The-Electric-Game-/precache-manifest.6a86c80292e794583b026004c0843209.js",
+    "service-worker.js": "/The-Electric-Game-/service-worker.js",
+    "static/css/main.d9e52e67.chunk.css.map": "/The-Electric-Game-/static/css/main.d9e52e67.chunk.css.map",
+    "static/js/2.b21629a6.chunk.js.LICENSE.txt": "/The-Electric-Game-/static/js/2.b21629a6.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/The-Electric-Game-/static/media/background.b7f915a0.jpg",
+    "static/media/football.svg": "/The-Electric-Game-/static/media/football.ade08109.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f5ec484d.js",
+    "static/js/2.b21629a6.chunk.js",
+    "static/css/main.d9e52e67.chunk.css",
+    "static/js/main.627ad7b2.chunk.js"
+  ]
+}
