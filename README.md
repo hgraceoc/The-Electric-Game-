@@ -37,7 +37,9 @@ Potential Extra Features:
 
 I then drew out a plan of the three views I wanted to produce, and how they would link to eachother. I included in this plan, a list of components that I wanted to include 
 
+## Initial Plan First Sketch: 
 
+![Initial Plan ](https://user-images.githubusercontent.com/60407868/85920756-56c6bd80-b86e-11ea-97ff-41c517ebc260.jpg)
 
 
 ## Refactoring the plan 
@@ -71,6 +73,17 @@ But I would like to include
 
 # For Functionality 
 - To allow n number of players - I also think this would be beneficial to the user experience. At the moment, the 'Randomise Teams' Button only appears once ten players are entered, which I don't think is entirely clear.
+
+## Views
+
+## Landing Page 
+<img width="1033" alt="Home" src="https://user-images.githubusercontent.com/60407868/85920757-5af2db00-b86e-11ea-8457-1ab5a59a411f.png">
+
+# Player Input Form 
+<img width="1037" alt="Select" src="https://user-images.githubusercontent.com/60407868/85920758-5dedcb80-b86e-11ea-8a1d-c17ea55786cc.png">
+
+## Team Tables
+<img width="1033" alt="Teams" src="https://user-images.githubusercontent.com/60407868/85920760-5fb78f00-b86e-11ea-8029-5443716d3e14.png">
 
 
 
