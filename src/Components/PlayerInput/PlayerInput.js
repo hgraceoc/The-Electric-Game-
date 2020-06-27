@@ -177,11 +177,9 @@ class PlayerInput extends Component {
                                     </tr>
                                 </thead>
                                 <tbody>
-
                                     <tr>
                                         {teamOne}
                                     </tr>
-
                                 </tbody>
                             </table>
 
@@ -193,11 +191,9 @@ class PlayerInput extends Component {
                                     </tr>
                                 </thead>
                                 <tbody>
-
                                     <tr>
                                         {teamTwo}
                                     </tr>
-
                                 </tbody>
                             </table>
                         </div>
