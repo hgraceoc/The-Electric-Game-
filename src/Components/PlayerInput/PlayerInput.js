@@ -11,6 +11,7 @@ class PlayerInput extends Component {
             teamOne: [],
             teamTwo: [],
             valid: false,
+            edit: false,
         };
         //store playerName input locally 
 
@@ -78,14 +79,15 @@ class PlayerInput extends Component {
         //player inputs are stored in local state, but the players array we are accessing from the store
         const { playerName } = this.state;
         const { submitted } = this.state;
+        const { edit } = this.state;
 
         const teams = this.pickTeams(players, 5)
 
         const teamOne = teams.length > 0 && teams[0].map((player, index) => {
-            return <h3>{ player }</h3>
+            return <h3>{player}</h3>
         })
         const teamTwo = teams.length > 1 && teams[1].map((player, index) => {
-            return <h3>{ player }</h3>
+            return <h3>{player}</h3>
         })
 
 
@@ -116,21 +118,21 @@ class PlayerInput extends Component {
 
                                 {players.length === 10 ? (
                                     <>
-                                    <button
-                                        disabled
-                                        className="formButton"
-                                        type="submit">
-                                        Add Player
-                                    </button>
-                                    <p>Click 'Randomise Teams' To Pick Your Teams!</p>
+                                        <button
+                                            disabled
+                                            className="formButton"
+                                            type="submit">
+                                            Add Player
+                                        </button>
+                                            <p>Click 'Randomise Teams' To Pick Your Teams!</p>
                                     </>
-                                    ) : (
+                                ) : (
 
-                                    <button
-                                        className="formButton"
-                                        type="submit">
-                                        Add Player
-                                    </button> )}
+                                        <button
+                                            className="formButton"
+                                            type="submit">
+                                            Add Player
+                                        </button>)}
                             </form>
                             <ul className="playerList">
                                 {players.map((player, index) =>
@@ -201,6 +203,7 @@ class PlayerInput extends Component {
 
 
                         <div className="buttons">
+
                             <button
                                 onClick={this.handleEditPlayers}
                                 className="formButton editButton">
@@ -216,15 +219,15 @@ class PlayerInput extends Component {
 
                         </div>
                     </>
-                ) : 
-                <div className="buttons">
-                <button
-                onClick={this.handleReset}
-                className="formButton resetButton1"
-                type="submit">
-                Reset!
-                </button>
-                </div>
+                ) :
+                    <div className="buttons">
+                        <button
+                            onClick={this.handleReset}
+                            className="formButton resetButton1"
+                            type="submit">
+                            Reset!
+                        </button>
+                    </div>
                 }
             </>
         )
