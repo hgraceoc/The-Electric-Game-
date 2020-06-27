@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/The-Electric-Game-/precache-manifest.332946d837e99e6b8a6f7eb3a1e7d095.js"
+  "/The-Electric-Game-/precache-manifest.6c4d694c1d0a3a7bd974bfbb9f3b926a.js"
 );
 
 self.addEventListener('message', (event) => {
