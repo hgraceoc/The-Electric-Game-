@@ -124,7 +124,7 @@ class PlayerInput extends Component {
                                             type="submit">
                                             Add Player
                                         </button>
-                                            <p>Click 'Randomise Teams' To Pick Your Teams!</p>
+                                        <p>Click 'Randomise Teams' To Pick Your Teams!</p>
                                     </>
                                 ) : (
 
@@ -162,7 +162,8 @@ class PlayerInput extends Component {
                             className="formButton submitTeamButton"
                             type="submit">
                             Randomise Teams!
-                        </button>) : null}
+                        </button>
+                        ) : null}
                 </div>
 
 
@@ -219,15 +220,16 @@ class PlayerInput extends Component {
 
                         </div>
                     </>
-                ) :
-                    <div className="buttons">
-                        <button
-                            onClick={this.handleReset}
-                            className="formButton resetButton1"
-                            type="submit">
-                            Reset!
-                        </button>
-                    </div>
+                ) : 
+                <div className="buttons">
+                <button
+                    onClick={this.handleReset}
+                    className="formButton resetButton1"
+                    type="submit">
+                    Reset!
+            </button>
+            </div>
+
                 }
             </>
         )
