@@ -77,13 +77,13 @@ But I would like to include
 # Views
 
 ## Landing Page 
-<img width="1033" alt="Home" src="https://user-images.githubusercontent.com/60407868/85920757-5af2db00-b86e-11ea-8457-1ab5a59a411f.png">
+<img width="1000" alt="Home" src="https://user-images.githubusercontent.com/60407868/85920757-5af2db00-b86e-11ea-8457-1ab5a59a411f.png">
 
 # Player Input Form 
-<img width="1037" alt="Select" src="https://user-images.githubusercontent.com/60407868/85920758-5dedcb80-b86e-11ea-8a1d-c17ea55786cc.png">
+<img width="1000" alt="Select" src="https://user-images.githubusercontent.com/60407868/85920758-5dedcb80-b86e-11ea-8a1d-c17ea55786cc.png">
 
 ## Team Tables
-<img width="1033" alt="Teams" src="https://user-images.githubusercontent.com/60407868/85920760-5fb78f00-b86e-11ea-8029-5443716d3e14.png">
+<img width="1000" alt="Teams" src="https://user-images.githubusercontent.com/60407868/85920989-765ee580-b870-11ea-93c0-cdb4c7cb52a1.png">
 
 
 
