@@ -34,7 +34,6 @@ html,body {
 }
 
 
-
 .background {
   background-image: url(../src/imgs/background.jpg);
   height: 100vh;
@@ -198,6 +197,7 @@ text-align: center;
   margin-bottom: 2rem;
 }
 
+/* Button Styling */
 .buttons {
   flex-wrap: wrap;
   text-align: center;
@@ -215,20 +215,6 @@ text-align: center;
 
 .removePlayerButton:hover {
   background-color: var(--lightYellow);
-}
-
-.playerList {
-  padding-left:0 
-}
-
-.playerListItem {
-  list-style: none;
-  margin: 1rem;
-  font-size: 25px;
-}
-
-.playerLabel {
-  font-weight: bold;
 }
 
 /* Table Styling */
@@ -265,5 +251,19 @@ td {
 
 tr {
   font-size: 25px;
+}
+
+.playerList {
+  padding-left:0 
+}
+
+.playerListItem {
+  list-style: none;
+  margin: 1rem;
+  font-size: 25px;
+}
+
+.playerLabel {
+  font-weight: bold;
 }
 
