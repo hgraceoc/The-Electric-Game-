@@ -47,9 +47,9 @@ class PlayerInput extends Component {
     }
 
     handleEditPlayers(e) {
-        const { playerName } = this.state;
-        this.props.handleEditPlayers(playerName)
+        const { players } = this.state;
         this.setState({ submitted: false })
+        // this.props.handleEditPlayers(players)
     }
 
     handleReset(e) {
@@ -59,8 +59,9 @@ class PlayerInput extends Component {
     }
 
     handleRemovePlayer(e) {
-        const { playerName } = this.state;
-        this.props.handleRemovePlayer(playerName.id)
+        const { players } = this.state;
+        const { player } = this.state;
+        this.props.handleRemovePlayer(player.id)
     }
 
     //helper function to split players into two equal teams of 5
@@ -80,12 +81,10 @@ class PlayerInput extends Component {
         const { playerName } = this.state;
         const { submitted } = this.state;
 
-        let validNumberOfPlayers = (players.length === 10)
-
         const teams = this.pickTeams(players, 5)
 
         const teamOne = teams.length > 0 && teams[0].map((player, index) => {
-            return <h3>Player{ index + 1 }: { player }</h3>
+            return <h3>Player{ index + 1 }: { player } key={index}</h3>
         })
         const teamTwo = teams.length > 1 && teams[1].map((player, index) => {
             return <h3>Player{ index + 1 }: { player }</h3>
@@ -140,14 +139,14 @@ class PlayerInput extends Component {
                                 {players.map((player, index) =>
                                     <>
                                         <li
-                                            key={index}
+                                            key={player.id}
                                             className="playerListItem">
                                             <label className="playerLabel">Player{index + 1} :  </label>
                                             {player}
                                         </li>
                                         <button
                                             className="removePlayerButton"
-                                            onClick={() => this.handleRemovePlayer(playerName)}>Remove Player
+                                            onClick={() => this.handleRemovePlayer(player.id)}>Remove Player
                                     </button>
                                     </>
                                 )}
@@ -166,13 +165,6 @@ class PlayerInput extends Component {
                             type="submit">
                             Randomise Teams!
                         </button>) : null}
-
-                    <button
-                        onClick={this.handleReset}
-                        className="formButton resetButton1"
-                        type="submit">
-                        Reset!
-                            </button>
                 </div>
 
 
@@ -215,8 +207,7 @@ class PlayerInput extends Component {
                         <div className="buttons">
                             <button
                                 onClick={this.handleEditPlayers}
-                                className="formButton editButton"
-                                type="submit">
+                                className="formButton editButton">
                                 Edit Players
                             </button>
 

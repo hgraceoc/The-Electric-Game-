@@ -130,7 +130,6 @@ html,body {
   margin-top: 2rem;
   margin-bottom: 2rem;
   overflow: scroll;
-  text-overflow: ellipsis;
 }
 
 
@@ -183,7 +182,6 @@ input {
   font-family: 'Muli', sans-serif;
   font-weight: bold;
   margin: 1rem;
-  overflow: scroll;
 }
 
 .formButton:hover {

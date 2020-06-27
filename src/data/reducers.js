@@ -13,16 +13,13 @@ const addPlayer = (state, action) => {
 
 const editPlayers = (state) =>  { 
     return  { 
-      ...state, 
-      players: state.players,
       submitted: false,
     } 
   };
 
 const removePlayer = (state, action) => {
     return {
-        ...state, 
-        players: state.players.filter((playerName) => playerName.id !== action.id)
+        players: state.players.filter((player) => player.id !== action.id)
     }
 }
 
@@ -50,6 +47,7 @@ const reducer = (state, action) => {
         case "ADD_PLAYER": return addPlayer(state, action);
         case "SHUFFLE": return shuffle(state, action);
         case "REMOVE_PLAYER": return removePlayer(state,action);
+        case "EDIT_PLAYERS": return editPlayers(state,action);
         case "RESET": return reset(state, action);
         default: return state;
     }
