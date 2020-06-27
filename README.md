@@ -65,7 +65,7 @@ For my design, I knew that I wanted three views
 
 # What I would like to work on:
 Inevitably, I ran out of time to make all the changes that I wanted to
-But I would like to include
+But I would like to include:
 
 ## For User Experience Purposes
 - Display a scroll bar at all times on the form, to make the action more clearly available 
@@ -73,6 +73,10 @@ But I would like to include
 
 ## For Functionality 
 - To allow n number of players - I also think this would be beneficial to the user experience. At the moment, the 'Randomise Teams' Button only appears once ten players are entered, which I don't think is entirely clear.
+
+## General
+- To refactor the code that I have written - specifically to move the shuffle funcition out of the reducer and into the player input component.
+- To split the single player input component into smaller components
 
 # Views
 
