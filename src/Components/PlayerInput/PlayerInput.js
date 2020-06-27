@@ -117,10 +117,24 @@ class PlayerInput extends Component {
                                     </input>
 
                                 </div>
-                                <button
-                                    className="formButton"
-                                    type="submit">
-                                    Add Player</button>
+
+                                {players.length === 10 ? (
+                                    <>
+                                    <button
+                                        disabled
+                                        className="formButton"
+                                        type="submit">
+                                        Add Player
+                                    </button>
+                                    <p>Click 'Randomise Teams' To Pick Your Teams!</p>
+                                    </>
+                                    ) : (
+
+                                    <button
+                                        className="formButton"
+                                        type="submit">
+                                        Add Player
+                                    </button> )}
                             </form>
                             <ul className="playerList">
                                 {players.map((player, index) =>
@@ -180,23 +194,23 @@ class PlayerInput extends Component {
                                 </tbody>
                             </table>
 
-                            
-                                <table className="teamTable">
-                                    <thead>
-                                        <tr>
-                                            <th className="title">Team Two</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
 
-                                        <tr>
-                                            {teamTwo}
-                                        </tr>
+                            <table className="teamTable">
+                                <thead>
+                                    <tr>
+                                        <th className="title">Team Two</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
 
-                                    </tbody>
-                                </table>
-                            </div>
-                        
+                                    <tr>
+                                        {teamTwo}
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+
 
                         <div className="buttons">
                             <button
