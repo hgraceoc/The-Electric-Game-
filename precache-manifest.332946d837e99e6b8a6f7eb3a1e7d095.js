@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "501da8065ced5b7c32e4923de9e46975",
+    "revision": "5833038cf40ea6d049289b4d5d4b9f6a",
     "url": "/The-Electric-Game-/index.html"
   },
   {
-    "revision": "2186d07e3dc27f807787",
-    "url": "/The-Electric-Game-/static/css/main.d9e52e67.chunk.css"
+    "revision": "a9dadc5c89bd6f60630b",
+    "url": "/The-Electric-Game-/static/css/main.071c13f8.chunk.css"
   },
   {
     "revision": "91454e1ad410d245c2a1",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/The-Electric-Game-/static/js/2.405206b6.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "2186d07e3dc27f807787",
-    "url": "/The-Electric-Game-/static/js/main.0b53d855.chunk.js"
+    "revision": "a9dadc5c89bd6f60630b",
+    "url": "/The-Electric-Game-/static/js/main.bcc63c08.chunk.js"
   },
   {
     "revision": "3ca616d647c04d9d752b",
