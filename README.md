@@ -3,7 +3,7 @@ Final project for Develop Me Bootcamp to create a random 5-a-side Team Generator
 
 ## To view the project:
 
-A live version can be accessed at:
+A live version can be accessed at: https://hgraceoc.github.io/The-Electric-Game-/.
 
 Otherwise to run the project using NPM, follow these steps:
 
@@ -41,7 +41,7 @@ I then drew out a plan of the three views I wanted to produce, and how they woul
 
 ## Initial Plan First Sketch: 
 
-![Initial Plan ](https://user-images.githubusercontent.com/60407868/85920756-56c6bd80-b86e-11ea-97ff-41c517ebc260.jpg)
+![Initial Plan ](https://user-images.githubusercontent.com/60407868/85926570-3c093e80-b898-11ea-95ad-8b36fdf65f1e.jpg)
 
 
 ## Refactoring the plan 
@@ -54,7 +54,7 @@ For my design, I knew that I wanted three views
 - Input Form 
 - Team Tables 
 
-## Decisions Made About Design Schem
+## Decisions Made About Design Scheme
 -Layout to be simple and consitent, so the team table and the form have very similar layouts. 
 
 -Background to be a collage of old football photos (more tonal/muted colours than full colour images)
@@ -69,8 +69,8 @@ For my design, I knew that I wanted three views
 Inevitably, I ran out of time to make all the changes that I wanted to - but I would like to include the following:
 
 ## For User Experience Purposes
-- Display a scroll bar at all times on the form, to make the action more clearly available 
-- Include 
+- Display a scroll bar at all times on the form, to make the action more clearly available (managed to fit this one in!)
+- Include more flexibility in terms of what the user can input
 
 ## For Functionality 
 - To allow n number of players - I also think this would be beneficial to the user experience. At the moment, the 'Randomise Teams' Button only appears once ten players are entered, which I don't think is entirely clear.
@@ -82,13 +82,17 @@ Inevitably, I ran out of time to make all the changes that I wanted to - but I w
 # Views
 
 ## Landing Page 
-<img width="1000" alt="Home" src="https://user-images.githubusercontent.com/60407868/85920757-5af2db00-b86e-11ea-8457-1ab5a59a411f.png">
+<img width="1000" alt="Home" src="https://user-images.githubusercontent.com/60407868/85926575-40355c00-b898-11ea-9258-b49d1fe6e7b3.png">
 
 # Player Input Form 
-<img width="1000" alt="Select" src="https://user-images.githubusercontent.com/60407868/85920758-5dedcb80-b86e-11ea-8a1d-c17ea55786cc.png">
+<img width="1000" alt="Select" src="https://user-images.githubusercontent.com/60407868/85926580-44fa1000-b898-11ea-87b6-d6f63e2ea8ab.png">
 
 ## Team Tables
-<img width="1000" alt="Teams" src="https://user-images.githubusercontent.com/60407868/85920989-765ee580-b870-11ea-93c0-cdb4c7cb52a1.png">
+<img width="1000" alt="Teams" src="https://user-images.githubusercontent.com/60407868/85926581-46c3d380-b898-11ea-8f49-17bb4ba2511e.png">
+
+
+
+
 
 
 
