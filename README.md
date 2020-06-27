@@ -66,8 +66,7 @@ For my design, I knew that I wanted three views
 -Yellow as base colour (I think this is vaguely neutral)
 
 # What I would like to work on:
-Inevitably, I ran out of time to make all the changes that I wanted to
-But I would like to include:
+Inevitably, I ran out of time to make all the changes that I wanted to - but I would like to include the following:
 
 ## For User Experience Purposes
 - Display a scroll bar at all times on the form, to make the action more clearly available 
