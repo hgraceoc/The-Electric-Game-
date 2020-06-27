@@ -7,10 +7,12 @@ A live version can be accessed at:
 
 Otherwise to run the project using NPM, follow these steps:
 
-- NPM and a Command Line tool is needed.
-- git clone this repo
-- run npm install
-- run npm start to view on localhost:3000
+In the Command Line:
+- first create a project directory
+- git clone git@github.com:hgraceoc/The-Electric-Game-.git
+- cd {project directory}
+- npm install
+- npm start (to view on localhost:3000)
 
 ## The brief 
 The core of the challenge is to create a tool which randomly picks 5-a-side football teams from a list of 10 names.
