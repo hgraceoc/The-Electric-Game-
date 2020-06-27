@@ -3,7 +3,7 @@ Final project for Develop Me Bootcamp to create a random 5-a-side Team Generator
 
 ## To view the project:
 
-A live version can be accessed at:
+A live version can be accessed at: https://hgraceoc.github.io/The-Electric-Game-/.
 
 Otherwise to run the project using NPM, follow these steps:
 
@@ -54,7 +54,7 @@ For my design, I knew that I wanted three views
 - Input Form 
 - Team Tables 
 
-## Decisions Made About Design Schem
+## Decisions Made About Design Scheme
 -Layout to be simple and consitent, so the team table and the form have very similar layouts. 
 
 -Background to be a collage of old football photos (more tonal/muted colours than full colour images)
