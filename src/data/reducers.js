@@ -13,7 +13,7 @@ const addPlayer = (state, action) => {
 
 const editPlayers = (state) =>  { 
     return  { 
-      submitted: false,
+      players: state.players,
     } 
   };
 

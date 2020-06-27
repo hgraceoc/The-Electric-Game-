@@ -48,9 +48,9 @@ class PlayerInput extends Component {
     }
 
     handleEditPlayers(e) {
-        // const { players } = this.state;
+        const { players } = this.state;
         this.setState({ submitted: false })
-        // this.props.handleEditPlayers(players)
+        this.props.handleEditPlayers(players)
     }
 
     handleReset(e) {
@@ -201,11 +201,13 @@ class PlayerInput extends Component {
 
                         <div className="buttons">
 
-                            <button
+                            {/* <button
                                 onClick={this.handleEditPlayers}
                                 className="formButton editButton">
                                 Edit Players
-                            </button>
+                            </button> 
+                            
+                            //Need to fix bug in Edit Players function which adds an extra empty player to the list.. */}
 
                             <button
                                 onClick={this.handleReset}

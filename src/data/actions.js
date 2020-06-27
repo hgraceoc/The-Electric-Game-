@@ -12,10 +12,10 @@ export const shuffle = (playerName) => {
     };
 };
 
-export const editPlayers = (playerName) => {
+export const editPlayers = (players) => {
     return {
         type: "EDIT_PLAYERS",
-        playerName,
+        players,
     };
 };
 
