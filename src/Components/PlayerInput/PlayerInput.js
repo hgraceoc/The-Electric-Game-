@@ -11,7 +11,6 @@ class PlayerInput extends Component {
             teamOne: [],
             teamTwo: [],
             valid: false,
-            edit: false,
         };
         //store playerName input locally 
 
@@ -60,7 +59,6 @@ class PlayerInput extends Component {
     }
 
     handleRemovePlayer(e, index) {
-        const { players } = this.props;
         this.props.handleRemovePlayer(index)
     }
 
@@ -79,15 +77,14 @@ class PlayerInput extends Component {
         //player inputs are stored in local state, but the players array we are accessing from the store
         const { playerName } = this.state;
         const { submitted } = this.state;
-        const { edit } = this.state;
 
         const teams = this.pickTeams(players, 5)
 
         const teamOne = teams.length > 0 && teams[0].map((player, index) => {
-            return <h3>{player}</h3>
+            return <h3 key={index}>{player}</h3>
         })
         const teamTwo = teams.length > 1 && teams[1].map((player, index) => {
-            return <h3>{player}</h3>
+            return <h3 key={index}>{player}</h3>
         })
 
 
@@ -137,9 +134,11 @@ class PlayerInput extends Component {
                             <ul className="playerList">
                                 {players.map((player, index) =>
                                     <>
-                                        <li
+                                        <li key={index}
                                             className="playerListItem">
-                                            <label className="playerLabel">Player{index + 1} :  </label>
+                                            <label
+                                                className="playerLabel">Player{index + 1} :
+                                            </label>
                                             {player}
                                         </li>
                                         <button
@@ -163,7 +162,7 @@ class PlayerInput extends Component {
                             type="submit">
                             Randomise Teams!
                         </button>
-                        ) : null}
+                    ) : null}
                 </div>
 
 
@@ -177,23 +176,17 @@ class PlayerInput extends Component {
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        {teamOne}
-                                    </tr>
+                                    <tr>{teamOne}</tr>
                                 </tbody>
                             </table>
 
 
                             <table className="teamTable">
                                 <thead>
-                                    <tr>
-                                        <th className="title">Team Two</th>
-                                    </tr>
+                                    <tr><th className="title">Team Two</th></tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        {teamTwo}
-                                    </tr>
+                                    <tr>{teamTwo}</tr>
                                 </tbody>
                             </table>
                         </div>
@@ -218,15 +211,15 @@ class PlayerInput extends Component {
 
                         </div>
                     </>
-                ) : 
-                <div className="buttons">
-                <button
-                    onClick={this.handleReset}
-                    className="formButton resetButton1"
-                    type="submit">
-                    Reset!
+                ) :
+                    <div className="buttons">
+                        <button
+                            onClick={this.handleReset}
+                            className="formButton resetButton1"
+                            type="submit">
+                            Reset!
             </button>
-            </div>
+                    </div>
 
                 }
             </>

@@ -9,9 +9,7 @@ import Home from "./Components/Home";
 import PlayerPlatform from './Components/PlayerPlatform';
 
 
-const App =({
-
-}) => (
+const App =() => (
     <Router>
       <>
         <Route exact path="/">
