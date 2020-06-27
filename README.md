@@ -22,7 +22,7 @@ I chose to to use React as I enjoyed using it during the Develop Me Bootcamp and
 
 I included redux, as although it would not have been neccersary to achieve my MVP (Minimum Viable Product), I considered that for future functionality - it may be useful to have set up initially with redux, rather than to convert at a later date.
 
-## My initial Plan 
+# My initial Plan 
 For my MVP, I knew that I needed to achieve the following:
 - Form input to accept 10 names
 - Keep track of state in each input
@@ -63,7 +63,7 @@ For my design, I knew that I wanted three views
 
 -Yellow as base colour (I think this is vaguely neutral)
 
-## What I would like to work on:
+# What I would like to work on:
 Inevitably, I ran out of time to make all the changes that I wanted to
 But I would like to include
 
@@ -71,10 +71,10 @@ But I would like to include
 - Display a scroll bar at all times on the form, to make the action more clearly available 
 - Include 
 
-# For Functionality 
+## For Functionality 
 - To allow n number of players - I also think this would be beneficial to the user experience. At the moment, the 'Randomise Teams' Button only appears once ten players are entered, which I don't think is entirely clear.
 
-## Views
+# Views
 
 ## Landing Page 
 <img width="1033" alt="Home" src="https://user-images.githubusercontent.com/60407868/85920757-5af2db00-b86e-11ea-8457-1ab5a59a411f.png">
