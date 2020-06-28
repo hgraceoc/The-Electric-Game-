@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "3fc89b14d3f6e6ba676b3dca4bba9846",
+    "revision": "041a40877d8d420534718d6d9806897d",
     "url": "/The-Electric-Game-/index.html"
   },
   {
-    "revision": "d8dfca78296de7440b54",
-    "url": "/The-Electric-Game-/static/css/main.5b261f07.chunk.css"
+    "revision": "5a2e90ec42099260a6de",
+    "url": "/The-Electric-Game-/static/css/main.f7233db9.chunk.css"
   },
   {
     "revision": "d9e79e4873f455adea6e",
@@ -16,16 +16,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/The-Electric-Game-/static/js/2.2cc9e810.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "d8dfca78296de7440b54",
-    "url": "/The-Electric-Game-/static/js/main.4c155be1.chunk.js"
+    "revision": "5a2e90ec42099260a6de",
+    "url": "/The-Electric-Game-/static/js/main.d6091ecd.chunk.js"
   },
   {
     "revision": "3ca616d647c04d9d752b",
     "url": "/The-Electric-Game-/static/js/runtime-main.f5ec484d.js"
-  },
-  {
-    "revision": "01d1677e091850886b4a79d2e45563bc",
-    "url": "/The-Electric-Game-/static/media/Merriweather-Bold.01d1677e.ttf"
   },
   {
     "revision": "db0192bf3558b950161f74432b425973",
@@ -36,8 +32,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/The-Electric-Game-/static/media/Shrikhand-Regular.5ce4272c.ttf"
   },
   {
-    "revision": "b7f915a00865ec36e8dc30b032499475",
-    "url": "/The-Electric-Game-/static/media/background.b7f915a0.jpg"
+    "revision": "bd16498f2c31f14fb350ece17c4d811e",
+    "url": "/The-Electric-Game-/static/media/background.bd16498f.jpg"
   },
   {
     "revision": "ade08109a1bd787d9c5bf81c84a430f9",

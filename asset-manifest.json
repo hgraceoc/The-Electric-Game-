@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/The-Electric-Game-/static/css/main.5b261f07.chunk.css",
-    "main.js": "/The-Electric-Game-/static/js/main.4c155be1.chunk.js",
-    "main.js.map": "/The-Electric-Game-/static/js/main.4c155be1.chunk.js.map",
+    "main.css": "/The-Electric-Game-/static/css/main.f7233db9.chunk.css",
+    "main.js": "/The-Electric-Game-/static/js/main.d6091ecd.chunk.js",
+    "main.js.map": "/The-Electric-Game-/static/js/main.d6091ecd.chunk.js.map",
     "runtime-main.js": "/The-Electric-Game-/static/js/runtime-main.f5ec484d.js",
     "runtime-main.js.map": "/The-Electric-Game-/static/js/runtime-main.f5ec484d.js.map",
     "static/js/2.2cc9e810.chunk.js": "/The-Electric-Game-/static/js/2.2cc9e810.chunk.js",
     "static/js/2.2cc9e810.chunk.js.map": "/The-Electric-Game-/static/js/2.2cc9e810.chunk.js.map",
     "index.html": "/The-Electric-Game-/index.html",
-    "precache-manifest.77299ce12dee0900ca4c4725b00e271e.js": "/The-Electric-Game-/precache-manifest.77299ce12dee0900ca4c4725b00e271e.js",
+    "precache-manifest.442dbf4db8280164a481da08c27691e2.js": "/The-Electric-Game-/precache-manifest.442dbf4db8280164a481da08c27691e2.js",
     "service-worker.js": "/The-Electric-Game-/service-worker.js",
-    "static/css/main.5b261f07.chunk.css.map": "/The-Electric-Game-/static/css/main.5b261f07.chunk.css.map",
+    "static/css/main.f7233db9.chunk.css.map": "/The-Electric-Game-/static/css/main.f7233db9.chunk.css.map",
     "static/js/2.2cc9e810.chunk.js.LICENSE.txt": "/The-Electric-Game-/static/js/2.2cc9e810.chunk.js.LICENSE.txt",
-    "static/media/App.css": "/The-Electric-Game-/static/media/background.b7f915a0.jpg",
+    "static/media/App.css": "/The-Electric-Game-/static/media/background.bd16498f.jpg",
     "static/media/football.svg": "/The-Electric-Game-/static/media/football.ade08109.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.f5ec484d.js",
     "static/js/2.2cc9e810.chunk.js",
-    "static/css/main.5b261f07.chunk.css",
-    "static/js/main.4c155be1.chunk.js"
+    "static/css/main.f7233db9.chunk.css",
+    "static/js/main.d6091ecd.chunk.js"
   ]
 }
