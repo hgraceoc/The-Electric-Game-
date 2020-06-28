@@ -197,18 +197,24 @@ input {
   }
 }
 
-
 .formButton {
   background-color:var(--lightYellow);
   border: none;
-  padding: 15px 25px;
+  padding: 20px 30px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 20px;
+  font-size: 28px;
   font-family: 'Muli', sans-serif;
   font-weight: bold;
   margin: 1rem;
+}
+
+@media screen and (max-width: 370px) {
+  .formButton {
+    font-size: 18px;
+    padding: 15px 25px;
+  }
 }
 
 .formButton:hover {
