@@ -64,6 +64,12 @@ html,body {
   pointer-events: none;
 }
 
+@media screen and (max-width: 370px) {
+  .logo {
+    height: 40vmin;
+  }
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .logo {
     animation: logo-spin infinite 20s linear;
@@ -106,9 +112,15 @@ html,body {
   padding: 25px 40px;
   text-align: center;
   display: inline-block;
-  font-size: 30px;
   font-weight: bold;
   margin: 2rem;
+}
+
+@media screen and (max-width: 370px) {
+  .homeLink {
+    font-size: 16px;
+    padding: 15px 30px;
+  }
 }
 
 .homeLink:hover {
@@ -130,6 +142,12 @@ html,body {
   margin-top: 3rem;
   margin-bottom: 2rem;
   overflow: scroll;
+}
+
+@media screen and (max-width: 370px) {
+  .playerInputForm{
+    padding: 0.5rem;
+  }
 }
   ::-webkit-scrollbar {
     height: 0%;
@@ -174,9 +192,15 @@ input {
   line-height: 30px;
   padding: 8px 15px;
   width: 70%;
-  font-size: calc(15px + 1vmin);
+  font-size: calc(14px + 1vmin);
   margin: 5px;
   text-align: center;
+}
+
+@media screen and (max-width: 370px) {
+  .input {
+    font-size: 10px;
+  }
 }
 
 
