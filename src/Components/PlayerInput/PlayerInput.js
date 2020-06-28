@@ -102,7 +102,7 @@ class PlayerInput extends Component {
                         <div className="form">
                             <form onSubmit={this.handleSubmit}>
                                 <h1 className="title">Name Your Players</h1>
-                                <p>Enter <strong>10 Player Names</strong> & Then Click <strong>'Randomise Teams'</strong> To Generate Two Random Teams..</p>
+                                <p>Enter <strong>10 Player Names</strong> & Then Click <strong>'Randomise Teams'</strong> To Generate Two Random Teams</p>
                                 <div className="formGroup">
                                     <input
                                         onChange={this.handleChange}
@@ -160,7 +160,7 @@ class PlayerInput extends Component {
                             onClick={this.handleSubmitTeams}
                             className="formButton submitTeamButton"
                             type="submit">
-                            Randomise Teams!
+                            Randomise Teams
                         </button>
                     ) : null}
                 </div>
